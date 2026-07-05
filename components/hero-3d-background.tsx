@@ -211,17 +211,23 @@ function Scene() {
 
 export function Hero3DBackground() {
   const [mounted, setMounted] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
-    return () => {
-      setMounted(false)
+    if (typeof window !== "undefined" && window.matchMedia) {
+      const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+      setReducedMotion(mq.matches)
+      const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)
+      mq.addEventListener?.("change", handler)
+      return () => mq.removeEventListener?.("change", handler)
     }
   }, [])
 
-  if (!mounted) {
-    return <div className="absolute inset-0 bg-[#0A1026]" />
+  // Respect reduced-motion: skip the animated WebGL scene entirely.
+  if (!mounted || reducedMotion) {
+    return <div className="absolute inset-0 bg-gradient-to-b from-[#0A1026] to-[#0f1a33]" />
   }
 
   return (

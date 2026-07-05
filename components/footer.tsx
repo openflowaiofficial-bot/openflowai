@@ -42,6 +42,7 @@ export function Footer() {
       title: "Company",
       links: [
         { name: "Team", href: "/team" },
+        { name: "Pricing", href: "/pricing" },
         { name: "Book a Demo", href: "/partner-intake" },
         { name: "Contact", href: "/partner-intake" },
       ],

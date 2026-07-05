@@ -16,25 +16,10 @@ function Header() {
     setMobileMenuOpen(false)
   }
 
-  const handleProductsEnter = () => {
-    console.log("[v0] Products menu opened")
-    setProductsMenuOpen(true)
-  }
-
-  const handleProductsLeave = () => {
-    console.log("[v0] Products menu closed")
-    setProductsMenuOpen(false)
-  }
-
-  const handleSolutionsEnter = () => {
-    console.log("[v0] Solutions menu opened")
-    setSolutionsMenuOpen(true)
-  }
-
-  const handleSolutionsLeave = () => {
-    console.log("[v0] Solutions menu closed")
-    setSolutionsMenuOpen(false)
-  }
+  const handleProductsEnter = () => setProductsMenuOpen(true)
+  const handleProductsLeave = () => setProductsMenuOpen(false)
+  const handleSolutionsEnter = () => setSolutionsMenuOpen(true)
+  const handleSolutionsLeave = () => setSolutionsMenuOpen(false)
 
   return (
     <>
@@ -53,7 +38,12 @@ function Header() {
           <nav className="hidden items-center gap-1 lg:flex">
             {/* Products Dropdown */}
             <div className="relative" onMouseEnter={handleProductsEnter} onMouseLeave={handleProductsLeave}>
-              <button className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100">
+              <button
+                onClick={() => setProductsMenuOpen((v) => !v)}
+                aria-expanded={productsMenuOpen}
+                aria-haspopup="true"
+                className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
+              >
                 Products
                 <svg
                   className={`ml-1 h-4 w-4 transition-transform ${productsMenuOpen ? "rotate-180" : ""}`}
@@ -135,7 +125,7 @@ function Header() {
                             </div>
                           </Link>
                           <Link
-                            href="#integrations"
+                            href="/integrations"
                             className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
@@ -271,7 +261,12 @@ function Header() {
 
             {/* Solutions Dropdown */}
             <div className="relative" onMouseEnter={handleSolutionsEnter} onMouseLeave={handleSolutionsLeave}>
-              <button className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100">
+              <button
+                onClick={() => setSolutionsMenuOpen((v) => !v)}
+                aria-expanded={solutionsMenuOpen}
+                aria-haspopup="true"
+                className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
+              >
                 Solutions
                 <svg
                   className={`ml-1 h-4 w-4 transition-transform ${solutionsMenuOpen ? "rotate-180" : ""}`}
@@ -546,11 +541,11 @@ function Header() {
                               conversation.
                             </p>
                             <Link
-                              href="#demo"
+                              href="/how-it-works"
                               className="mt-3 inline-flex items-center text-sm font-medium text-cyan-600 hover:text-cyan-700"
                               onClick={handleNavigation}
                             >
-                              Watch demo
+                              See how it works
                               <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
@@ -570,6 +565,13 @@ function Header() {
               onClick={handleNavigation}
             >
               Automations
+            </Link>
+            <Link
+              href="/pricing"
+              className="text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
+              onClick={handleNavigation}
+            >
+              Pricing
             </Link>
             <Link
               href="/partner-intake"
@@ -772,6 +774,15 @@ function Header() {
               onClick={handleNavigation}
             >
               How It Works
+            </Link>
+
+            {/* Pricing Link - Mobile */}
+            <Link
+              href="/pricing"
+              className="block py-2 text-base font-medium text-gray-900 hover:text-gray-600"
+              onClick={handleNavigation}
+            >
+              Pricing
             </Link>
 
             {/* Clients Link - Mobile */}

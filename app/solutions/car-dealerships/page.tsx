@@ -84,6 +84,7 @@ export default function CarDealershipsPage() {
                 <div className="text-xs sm:text-sm text-gray-600">Monthly Revenue Recovered</div>
               </div>
             </div>
+            <p className="mt-4 text-xs text-gray-500 text-center">Illustrative example — actual results vary by business.</p>
           </div>
         </section>
 

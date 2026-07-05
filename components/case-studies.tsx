@@ -182,6 +182,13 @@ export function CaseStudies() {
               </div>
 
               <div className="mt-6 pt-5 border-t border-white/20">
+                <p className="text-xs leading-relaxed text-white/60">
+                  Dollar figures are directional estimates modeled from call activity using the assumptions shown — not
+                  billed revenue. Call, transfer, and appointment counts are actual.
+                </p>
+              </div>
+
+              <div className="mt-6 pt-5 border-t border-white/20">
                 <p className="text-xs text-white/70 mb-1">Case Study</p>
                 <p className="text-base sm:text-lg md:text-xl font-medium text-white">
                   {caseStudy.company}

@@ -88,6 +88,7 @@ export default function InsurancePage() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs text-gray-500 text-center">Illustrative example — actual results vary by business.</p>
         </div>
       </section>
 

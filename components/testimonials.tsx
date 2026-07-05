@@ -1,7 +1,7 @@
 "use client"
 
 export function Testimonials() {
-  const testimonials = [
+  const testimonials: { quote: string; author: string; role: string; company: string; image?: string }[] = [
     {
       quote:
         "I was honestly skeptical about letting AI answer calls for Regenerative Mind and Body. Med spa clients can be particular — they're asking about treatments, pricing, sometimes things that feel personal — and I didn't want anyone feeling like they were talking to a robot. But after a few months, I'm sold. The AI sounds natural, handles questions about our services way better than I expected, and books consultations directly into our calendar. I'm not missing calls anymore when I'm with clients, and people don't seem to mind at all — a few have even told me how easy it was to get scheduled. The biggest difference is just peace of mind. I'm not glued to my phone, I'm not playing catch-up at the end of the day returning voicemails, and new clients are getting a great first impression every single time. If you run a med spa or any kind of appointment-based business, this is honestly a no-brainer.",
@@ -15,14 +15,6 @@ export function Testimonials() {
       author: "O'Daniel Automotive Group",
       role: "Service Department",
       company: "O'Daniel Automotive Group",
-    },
-    {
-      quote:
-        "We were very impressed with Danny as an operator. He is quick and resourceful in solving any issues while setting up his leads system. We were able to contact several hundred quality leads, and initiate conversations with dozens of them within a few weeks. So far we've already closed one of those leads, getting a tri-plex under contract that fit exactly what we were looking for. This deal will give us 6 figures in equity gained post-construction and it cost us less than $1k to acquire that lead. We connected with the seller directly, got it at a discount relative to market value, and didn't have to worry about competitors bidding on it, or outbidding us. Controlling your own off market lead generation is a major key in real estate investing, and working with Danny has exceeded our expectations. Highly recommend.",
-      author: "Armon Kaviani",
-      role: "Real Estate Investor",
-      company: "Hoosier Home Buyers Group",
-      image: "/testimonials/armon-kaviani.png",
     },
   ]
 
@@ -38,7 +30,7 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
