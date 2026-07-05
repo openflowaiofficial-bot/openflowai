@@ -1,0 +1,13 @@
+# Claude Code local settings
+.claude/settings.local.json
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.log
+
+# Dependencies / build output
+node_modules/
+dist/
+build/
+.env
