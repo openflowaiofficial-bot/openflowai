@@ -258,6 +258,26 @@ function Header() {
                               <div className="text-sm text-gray-500">Real-time performance data</div>
                             </div>
                           </Link>
+                          <Link
+                            href="/products/crm"
+                            className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
+                            onClick={handleNavigation}
+                          >
+                            <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
+                              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm5 4h6M9 14h6"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <div className="font-medium text-gray-900">OpenFlow CRM</div>
+                              <div className="text-sm text-gray-500">Leads, calls &amp; pipeline in one place</div>
+                            </div>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -673,6 +693,13 @@ function Header() {
                     onClick={handleNavigation}
                   >
                     Analytics & Insights
+                  </Link>
+                  <Link
+                    href="/products/crm"
+                    className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                    onClick={handleNavigation}
+                  >
+                    OpenFlow CRM
                   </Link>
                 </div>
               )}

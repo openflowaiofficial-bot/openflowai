@@ -8,6 +8,7 @@ export function Footer() {
     {
       title: "Products",
       links: [
+        { name: "OpenFlow CRM", href: "/products/crm" },
         { name: "Voice AI", href: "/products/ai-voice" },
         { name: "SMS AI", href: "/products/sms-automation" },
         { name: "Appointment Booking", href: "/products/appointment" },

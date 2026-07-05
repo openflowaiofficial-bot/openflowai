@@ -12,6 +12,7 @@ const routes = [
   "/privacy",
   "/terms",
   "/cookies",
+  "/products/crm",
   "/products/ai-voice",
   "/products/sms-automation",
   "/products/appointment",
