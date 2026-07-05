@@ -1,152 +1,76 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import dynamic from "next/dynamic"
-
-const Hero3DBackground = dynamic(
-  () => import("./hero-3d-background").then((mod) => mod.Hero3DBackground),
-  { ssr: false }
-)
 
 export function Hero() {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
-
-  const words = [
-    { text: "Analyze", icon: "chart" },
-    { text: "Transform", icon: "sparkles" },
-    { text: "Automate", icon: "robot" },
-  ]
+  const [wordIndex, setWordIndex] = useState(0)
+  const words = ["Automate", "Analyze", "Transform"]
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length)
+      setWordIndex((prev) => (prev + 1) % words.length)
     }, 3000)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-[#0A1026] text-white py-20 md:py-40 min-h-[600px] md:min-h-[700px]">
-      {/* ====================================================== */}
-      {/* 3D BACKGROUND */}
-      {/* ====================================================== */}
-      <Hero3DBackground />
+    <section className="relative overflow-hidden bg-[#070b18] text-white">
+      {/* ===== Background ===== */}
+      <div className="pointer-events-none absolute inset-0">
+        {/* Soft radial glow behind the headline */}
+        <div className="absolute left-1/2 top-[36%] h-[520px] w-[820px] max-w-[95vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/20 blur-[130px]" />
+        {/* Fine grid, faded toward the edges */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(148,163,184,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.07) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            maskImage: "radial-gradient(ellipse 70% 60% at 50% 38%, #000 30%, transparent 100%)",
+            WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 38%, #000 30%, transparent 100%)",
+          }}
+        />
+        {/* Subtle aurora rising from the bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-blue-700/15 via-blue-800/5 to-transparent" />
+        {/* Fade the section into whatever follows */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#070b18] to-transparent" />
+      </div>
 
-      {/* ====================================================== */}
-      {/* HERO CONTENT */}
-      {/* ====================================================== */}
-      <div className="relative container mx-auto px-4 md:px-6 text-center max-w-4xl">
-        <div className="mb-8 flex justify-center">
-          <div className="relative w-24 h-24 md:w-32 md:h-32">
-            {/* Chart Icon */}
-            <div
-              className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 0 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-              }`}
-            >
-              <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#gradient1)" strokeWidth="1.5" />
-                <path d="M7 16L10 13L13 15L17 9" stroke="url(#gradient1)" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="7" cy="16" r="2" fill="#60A5FA" />
-                <circle cx="10" cy="13" r="2" fill="#60A5FA" />
-                <circle cx="13" cy="15" r="2" fill="#60A5FA" />
-                <circle cx="17" cy="9" r="2" fill="#60A5FA" />
-                <defs>
-                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#60A5FA" />
-                    <stop offset="100%" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            {/* Sparkles Icon */}
-            <div
-              className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 1 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-              }`}
-            >
-              <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
-                <path
-                  d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
-                  fill="url(#gradient2)"
-                  stroke="#60A5FA"
-                  strokeWidth="1"
-                />
-                <path d="M18 4L18.5 6L20.5 6.5L18.5 7L18 9L17.5 7L15.5 6.5L17.5 6L18 4Z" fill="#60A5FA" />
-                <path d="M6 15L6.5 17L8.5 17.5L6.5 18L6 20L5.5 18L3.5 17.5L5.5 17L6 15Z" fill="#60A5FA" />
-                <defs>
-                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#818CF8" />
-                    <stop offset="100%" stopColor="#60A5FA" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            {/* Robot Icon */}
-            <div
-              className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-              }`}
-            >
-              <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
-                <rect
-                  x="6"
-                  y="8"
-                  width="12"
-                  height="10"
-                  rx="2"
-                  stroke="url(#gradient3)"
-                  strokeWidth="1.5"
-                  fill="rgba(96,165,250,0.1)"
-                />
-                <circle cx="9" cy="12" r="1.5" fill="#60A5FA" />
-                <circle cx="15" cy="12" r="1.5" fill="#60A5FA" />
-                <path d="M9 15H15" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" />
-                <path d="M12 8V5M12 5L10 7M12 5L14 7" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" />
-                <path d="M6 11H4M20 11H18" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" />
-                <path d="M8 18V20M16 18V20" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" />
-                <defs>
-                  <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#60A5FA" />
-                    <stop offset="100%" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            {/* Ambient glow effect */}
-            <div className="absolute inset-0 bg-blue-500/25 blur-3xl animate-breathe" />
-          </div>
+      {/* ===== Content ===== */}
+      <div className="relative mx-auto max-w-4xl px-6 py-28 md:py-40 text-center">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-blue-100 backdrop-blur-sm animate-fadeInUp">
+          <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+          AI voice, SMS &amp; email agents
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight drop-shadow-[0_0_18px_rgba(0,0,0,0.6)] px-2">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08]">
           <span
-            key={currentWordIndex}
-            className="inline-block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fadeInUp"
+            key={wordIndex}
+            className="inline-block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent animate-fadeInUp"
           >
-            {words[currentWordIndex].text}
+            {words[wordIndex]}
           </span>{" "}
-          every customer experience with AI agent
+          every customer
+          <br className="hidden sm:block" /> experience with AI agents
         </h1>
 
-        <p className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto px-6">
-          OpenFlow AI builds enterprise-grade conversational agents that answer, qualify, schedule, and resolve — across
-          every communication channel.
+        <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-slate-300">
+          OpenFlow AI answers, qualifies, schedules, and follows up across every channel — so your business never misses
+          a call, a lead, or a booking.
         </p>
 
-        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center gap-3 md:gap-6 px-6">
+        <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
           <a
             href="/partner-intake"
-            className="px-8 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 rounded-full text-base font-medium shadow-lg shadow-blue-600/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 w-full sm:w-auto text-center"
+            className="rounded-full bg-blue-600 px-7 py-3.5 text-base font-medium shadow-lg shadow-blue-600/30 transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40"
           >
-            Get a Demo →
+            Get a Demo
           </a>
           <a
             href="/how-it-works"
-            className="px-8 md:px-8 py-3 md:py-4 border border-gray-400/40 rounded-full text-base font-medium hover:bg-white/10 hover:border-gray-300/60 transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto text-center"
+            className="rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-base font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:-translate-y-0.5"
           >
-            How It Works →
+            How It Works
           </a>
         </div>
       </div>
