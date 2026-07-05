@@ -41,7 +41,7 @@ export default function AutomationsPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <a
                 href="/partner-intake"
-                className="rounded-full bg-cyan-500 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg transition-all hover:bg-cyan-600 hover:shadow-xl hover:scale-105 w-full sm:w-auto text-center"
+                className="rounded-full bg-cyan-500 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg transition-all duration-200 hover:bg-cyan-600 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-center"
               >
                 Get Started
               </a>

@@ -132,7 +132,7 @@ export default function SMSAutomationPage() {
 
               <button
                 onClick={() => setIsDemoModalOpen(true)}
-                className="rounded-full bg-cyan-600 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg hover:bg-cyan-700 transition-all hover:shadow-xl hover:scale-105 w-full sm:w-auto"
+                className="rounded-full bg-cyan-600 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg hover:bg-cyan-700 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 Get Started
               </button>

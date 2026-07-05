@@ -34,7 +34,7 @@ export function FinalCTA() {
           <div className="mx-auto mt-8 md:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 px-4">
             <Link
               href="/partner-intake"
-              className="h-12 md:h-14 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] px-8 text-sm md:text-[16px] font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105 inline-flex items-center justify-center"
+              className="h-12 md:h-14 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] px-8 text-sm md:text-[16px] font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl inline-flex items-center justify-center"
             >
               Book a demo
               <svg className="ml-2 h-4 w-4 md:h-5 md:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

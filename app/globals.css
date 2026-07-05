@@ -51,6 +51,11 @@
 
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Motion easing tokens */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark {
@@ -138,13 +143,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  /* Adding custom animation keyframes */
-  --animate-slide-right: slideRight 0.8s ease-out forwards;
-  --animate-slide-left: slideLeft 0.8s ease-out forwards;
-  --animate-wave1: wave1 18s ease-in-out infinite;
-  --animate-wave2: wave2 22s ease-in-out infinite;
-  --animate-pulseNode: pulseNode 4s ease-in-out infinite;
 }
 
 @layer base {
@@ -154,175 +152,180 @@
 }
 
 /* ===================================================== */
-/* === PREMIUM AI MESH BACKGROUND ANIMATIONS (CLEAN) === */
+/* === MOTION SYSTEM =================================== */
+/* Restrained, purposeful motion: smooth ease-out curves, */
+/* no overshoot, motion on entrance/interaction only.     */
 /* ===================================================== */
 
-/* --- Mesh Wave 1 --- */
+/* Consistent hover/interaction easing for interactive chrome */
+a,
+button {
+  transition-timing-function: var(--ease-standard);
+}
+
+/* --- Entrance: fade + rise (no overshoot) --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp,
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s var(--ease-out-quint) both;
+}
+
+/* --- Entrance: horizontal slides --- */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-right {
+  animation: slideRight 0.7s var(--ease-out-quint) both;
+}
+.animate-slide-left {
+  animation: slideLeft 0.7s var(--ease-out-quint) both;
+}
+
+/* --- Header mega-menu entrance --- */
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-dropdown {
+  animation: dropdownIn 0.2s var(--ease-out-quart) both;
+  transform-origin: top center;
+}
+
+/* --- Floating badge entrance --- */
+@keyframes floatBadge {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-float-badge {
+  animation: floatBadge 0.7s var(--ease-out-quint) both;
+}
+
+/* --- Subtle ambient glow (replaces harsh pulse) --- */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+.animate-breathe {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+/* --- Ambient mesh (kept slow and subtle) --- */
 @keyframes wave1 {
   0% {
     transform: translateX(0) translateY(0);
   }
   50% {
-    transform: translateX(-40px) translateY(20px) scale(1.05);
+    transform: translateX(-30px) translateY(16px) scale(1.03);
   }
   100% {
     transform: translateX(0) translateY(0);
   }
 }
-
 .animate-wave1 {
-  animation: wave1 18s ease-in-out infinite;
+  animation: wave1 26s ease-in-out infinite;
 }
-
-/* --- Mesh Wave 2 --- */
 @keyframes wave2 {
   0% {
     transform: translateX(0) translateY(0);
   }
   50% {
-    transform: translateX(40px) translateY(-20px) scale(1.08);
+    transform: translateX(30px) translateY(-16px) scale(1.05);
   }
   100% {
     transform: translateX(0) translateY(0);
   }
 }
-
 .animate-wave2 {
-  animation: wave2 22s ease-in-out infinite;
+  animation: wave2 30s ease-in-out infinite;
 }
-
-/* --- AI Node Pulse --- */
 @keyframes pulseNode {
   0%,
   100% {
-    opacity: 0.4;
+    opacity: 0.35;
     transform: scale(1);
   }
   50% {
-    opacity: 0.9;
-    transform: scale(1.8);
+    opacity: 0.7;
+    transform: scale(1.25);
   }
 }
-
 .animate-pulseNode {
-  animation: pulseNode 4s ease-in-out infinite;
+  animation: pulseNode 5s ease-in-out infinite;
 }
 
-/* --- Floating Badge Animation --- */
-@keyframes floatBadge {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-float-badge {
-  animation: floatBadge 0.8s ease-out;
-}
-
-/* --- Fade In Up Animation --- */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Adding new fadeInUp animation for rotating headline */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* --- Slide Right Animation --- */
-@keyframes slideRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slide-right {
-  animation: slideRight 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-/* --- Slide Left Animation --- */
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slide-left {
-  animation: slideLeft 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-/* Adding continuous scrolling banner animations */
+/* --- Marquees: slow, smooth, edge-masked in markup --- */
 @keyframes scrollLeft {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
-
 @keyframes scrollRight {
-  0% {
+  from {
     transform: translateX(-50%);
   }
-  100% {
+  to {
     transform: translateX(0);
   }
 }
-
 .animate-scroll-left {
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 60s linear infinite;
 }
-
 .animate-scroll-right {
-  animation: scrollRight 15s linear infinite;
+  animation: scrollRight 55s linear infinite;
 }
-
 .animate-scroll-left-slow {
-  animation: scrollLeft 25s linear infinite;
+  animation: scrollLeft 80s linear infinite;
 }
-
 .animate-scroll-right-slow {
-  animation: scrollRight 18s linear infinite;
+  animation: scrollRight 70s linear infinite;
 }
 
 /* Respect users who prefer reduced motion */

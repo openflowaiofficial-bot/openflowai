@@ -37,9 +37,16 @@ function Header() {
           {/* Desktop Nav */}
           <nav className="hidden items-center gap-1 lg:flex">
             {/* Products Dropdown */}
-            <div className="relative" onMouseEnter={handleProductsEnter} onMouseLeave={handleProductsLeave}>
+            <div
+              className="relative"
+              onMouseEnter={handleProductsEnter}
+              onMouseLeave={handleProductsLeave}
+              onFocus={handleProductsEnter}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) handleProductsLeave()
+              }}
+            >
               <button
-                onClick={() => setProductsMenuOpen((v) => !v)}
                 aria-expanded={productsMenuOpen}
                 aria-haspopup="true"
                 className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
@@ -56,7 +63,7 @@ function Header() {
               </button>
 
               {productsMenuOpen && (
-                <div className="absolute left-0 top-full pt-4 z-50">
+                <div className="absolute left-0 top-full pt-4 z-50 animate-dropdown">
                   <div className="w-[800px] rounded-2xl border border-gray-200 bg-white p-8 shadow-2xl">
                     <div className="grid grid-cols-[300px_1fr] gap-8">
                       {/* Platform Column with Visual */}
@@ -260,9 +267,16 @@ function Header() {
             </div>
 
             {/* Solutions Dropdown */}
-            <div className="relative" onMouseEnter={handleSolutionsEnter} onMouseLeave={handleSolutionsLeave}>
+            <div
+              className="relative"
+              onMouseEnter={handleSolutionsEnter}
+              onMouseLeave={handleSolutionsLeave}
+              onFocus={handleSolutionsEnter}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) handleSolutionsLeave()
+              }}
+            >
               <button
-                onClick={() => setSolutionsMenuOpen((v) => !v)}
                 aria-expanded={solutionsMenuOpen}
                 aria-haspopup="true"
                 className="flex items-center text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
@@ -279,7 +293,7 @@ function Header() {
               </button>
 
               {solutionsMenuOpen && (
-                <div className="absolute left-0 top-full pt-4 z-50">
+                <div className="absolute left-0 top-full pt-4 z-50 animate-dropdown">
                   <div className="w-[900px] rounded-2xl border border-gray-200 bg-white p-8 shadow-2xl">
                     <div className="grid grid-cols-[1fr_1fr_280px] gap-8">
                       {/* Use Cases Column */}

@@ -27,7 +27,7 @@ export default function AnalyticsPage() {
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               Get actionable insights from every customer interaction with comprehensive analytics dashboards.
             </p>
-            <button className="rounded-full bg-cyan-500 px-8 py-4 text-base md:text-lg font-medium text-white shadow-lg hover:bg-cyan-600 transition-all hover:shadow-xl hover:scale-105 w-full sm:w-auto">
+            <button className="rounded-full bg-cyan-500 px-8 py-4 text-base md:text-lg font-medium text-white shadow-lg hover:bg-cyan-600 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto">
               Get Started
             </button>
           </div>

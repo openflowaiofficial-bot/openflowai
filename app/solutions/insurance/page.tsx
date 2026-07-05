@@ -54,7 +54,7 @@ export default function InsurancePage() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Start Free Trial
               </Link>
@@ -182,7 +182,7 @@ export default function InsurancePage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-0.5"
           >
             Get Started Today
           </Link>

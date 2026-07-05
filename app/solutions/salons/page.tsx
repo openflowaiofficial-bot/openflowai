@@ -56,7 +56,7 @@ export default function SalonsPage() {
               >
                 <button
                   onClick={() => setIsDemoModalOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-rose-500/25 hover:shadow-rose-500/40 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-rose-500/25 hover:shadow-rose-500/40 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Start Free Trial
                 </button>
@@ -186,7 +186,7 @@ export default function SalonsPage() {
             </p>
             <button
               onClick={() => setIsDemoModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-rose-500/25 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               Get a Demo
             </button>

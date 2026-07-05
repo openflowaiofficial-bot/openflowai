@@ -268,7 +268,7 @@ export function Integrations() {
         <div className="mt-12 md:mt-16 text-center">
           <a
             href="/integrations"
-            className="rounded-full bg-blue-600 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl hover:scale-105"
+            className="rounded-full bg-blue-600 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5"
           >
             See Integrations
           </a>

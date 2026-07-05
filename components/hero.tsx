@@ -40,7 +40,7 @@ export function Hero() {
             {/* Chart Icon */}
             <div
               className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 0 ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 -rotate-45"
+                currentWordIndex === 0 ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ export function Hero() {
             {/* Sparkles Icon */}
             <div
               className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 1 ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 rotate-45"
+                currentWordIndex === 1 ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ export function Hero() {
             {/* Robot Icon */}
             <div
               className={`absolute inset-0 transition-all duration-700 ${
-                currentWordIndex === 2 ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 -rotate-90"
+                currentWordIndex === 2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
@@ -115,8 +115,8 @@ export function Hero() {
               </svg>
             </div>
 
-            {/* Pulsing glow effect */}
-            <div className="absolute inset-0 bg-blue-500/30 blur-3xl animate-pulse" />
+            {/* Ambient glow effect */}
+            <div className="absolute inset-0 bg-blue-500/25 blur-3xl animate-breathe" />
           </div>
         </div>
 
@@ -138,13 +138,13 @@ export function Hero() {
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center gap-3 md:gap-6 px-6">
           <a
             href="/partner-intake"
-            className="px-8 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 rounded-full text-base font-medium shadow-lg shadow-blue-600/30 transition-all hover:scale-105 w-full sm:w-auto text-center"
+            className="px-8 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 rounded-full text-base font-medium shadow-lg shadow-blue-600/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 w-full sm:w-auto text-center"
           >
             Get a Demo →
           </a>
           <a
             href="/how-it-works"
-            className="px-8 md:px-8 py-3 md:py-4 border border-gray-400/40 rounded-full text-base font-medium hover:bg-white/10 transition-all hover:scale-105 w-full sm:w-auto text-center"
+            className="px-8 md:px-8 py-3 md:py-4 border border-gray-400/40 rounded-full text-base font-medium hover:bg-white/10 hover:border-gray-300/60 transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto text-center"
           >
             How It Works →
           </a>

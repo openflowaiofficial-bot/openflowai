@@ -343,7 +343,7 @@ export default function IntegrationsPage() {
           </p>
           <button
             onClick={() => setIsDemoModalOpen(true)}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 sm:px-10 sm:py-5 text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 sm:px-10 sm:py-5 text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5"
           >
             Request Integration
           </button>

@@ -71,7 +71,7 @@ export default function AppointmentPage() {
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Let customers book appointments via phone or SMS while AI syncs with your calendar in real-time.
               </p>
-              <button className="rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white shadow-lg hover:bg-blue-700 transition-all hover:shadow-xl hover:scale-105 w-full sm:w-auto">
+              <button className="rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white shadow-lg hover:bg-blue-700 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto">
                 Get Started
               </button>
             </div>
