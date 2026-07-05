@@ -125,7 +125,7 @@ export function Features() {
                               key={i}
                               className="w-0.5 sm:w-1 rounded-full bg-blue-400"
                               style={{
-                                height: `${Math.random() * 60 + 10}px`,
+                                height: `${12 + Math.round((Math.sin(i * 1.3) * 0.5 + 0.5) * 52)}px`,
                                 animation: "pulse 1.5s ease-in-out infinite",
                                 animationDelay: `${i * 0.05}s`,
                               }}

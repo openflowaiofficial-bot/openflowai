@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export function PlatformShowcase() {
-  const topLeftBadges = ["ENTERPRISE SECURITY", "ISO 27001", "VOICE SDK"]
+  const topLeftBadges = ["ENCRYPTED IN TRANSIT", "VOICE SDK", "MULTILINGUAL"]
   const middleLeftBadges = ["AI TRAINING", "CHAT SDK"]
-  const bottomLeftBadges = ["HUMAN-IN-LOOP", "OPENAI"]
+  const bottomLeftBadges = ["HUMAN-IN-LOOP", "REAL-TIME"]
 
-  const topRightBadges = ["CHAIN-OF-THOUGHT", "HIPAA COMPLIANT", "AI WORKFLOWS"]
-  const middleRightBadges = ["GUARDRAILS", "CUSTOM INTEGRATION"]
+  const topRightBadges = ["CHAIN-OF-THOUGHT", "GUARDRAILS", "AI WORKFLOWS"]
+  const middleRightBadges = ["RATE LIMITED", "CUSTOM INTEGRATION"]
   const bottomRightBadges = ["CRM SYNC", "BEHAVIORAL MODELING"]
 
   return (

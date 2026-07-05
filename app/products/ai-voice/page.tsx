@@ -24,12 +24,12 @@ export default function AIVoicePage() {
           <div className="px-4 sm:px-6 md:px-12 lg:px-16 pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-16">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6 leading-tight px-2">
-                Deliver exceptional CX for less, with human-centric AI agents you can trust
+                AI voice agents that answer every call, qualify every lead, and book more jobs
               </h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-                Cresta AI Agent delivers human-like conversations across channels and languages that adapt to customer
-                needs while safeguarding your brand and data, eliminating the trade-off between cost efficiency and
-                exceptional customer experience.
+                OpenFlow AI's voice agents handle inbound and outbound calls around the clock — answering questions,
+                qualifying leads, and scheduling appointments in natural conversation, then syncing every detail
+                straight to your CRM.
               </p>
 
               {/* CTA Buttons */}
@@ -44,12 +44,12 @@ export default function AIVoicePage() {
                   </svg>
                 </button>
                 <a
-                  href="#"
+                  href="/how-it-works"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all hover:scale-105 border border-white/20 text-sm sm:text-base"
                 >
-                  Watch video
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
+                  See how it works
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>

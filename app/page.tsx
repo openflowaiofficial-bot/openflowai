@@ -6,8 +6,6 @@ import { CaseStudies } from "@/components/case-studies"
 import { Integrations } from "@/components/integrations"
 import { Security } from "@/components/security"
 import { Testimonials } from "@/components/testimonials"
-import { Metrics } from "@/components/metrics"
-import { ProductExplainer } from "@/components/product-explainer"
 import { FreeResources } from "@/components/free-resources"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
@@ -23,8 +21,6 @@ export default function Page() {
       <Integrations />
       <Security />
       <Testimonials />
-      <Metrics />
-      <ProductExplainer />
       <FreeResources />
       <FinalCTA />
       <Footer />

@@ -2,6 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function Footer() {
+  const year = new Date().getFullYear()
+
   const footerSections = [
     {
       title: "Products",
@@ -9,6 +11,8 @@ export function Footer() {
         { name: "Voice AI", href: "/products/ai-voice" },
         { name: "SMS AI", href: "/products/sms-automation" },
         { name: "Appointment Booking", href: "/products/appointment" },
+        { name: "Lead Qualification", href: "/products/lead-qualification" },
+        { name: "Call Recording", href: "/products/call-recording" },
         { name: "Analytics", href: "/products/analytics" },
         { name: "Automations", href: "/automations" },
       ],
@@ -18,29 +22,28 @@ export function Footer() {
       links: [
         { name: "Car Dealerships", href: "/solutions/car-dealerships" },
         { name: "Medical Offices", href: "/solutions/medical-offices" },
-        { name: "Spas & Wellness", href: "/solutions/spas" },
-        { name: "Salons", href: "/solutions/salons" },
+        { name: "HVAC", href: "/solutions/hvac" },
+        { name: "Plumbers", href: "/solutions/plumbers" },
         { name: "Home Services", href: "/solutions/handyman" },
+        { name: "Salons", href: "/solutions/salons" },
+        { name: "Spas & Wellness", href: "/solutions/spas" },
+        { name: "Insurance", href: "/solutions/insurance" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { name: "Documentation", href: "#documentation" },
-        { name: "Blog", href: "#blog" },
-        { name: "Case Studies", href: "#case-studies" },
-        { name: "White Papers", href: "#white-papers" },
-        { name: "Webinars", href: "#webinars" },
+        { name: "How It Works", href: "/how-it-works" },
+        { name: "Integrations", href: "/integrations" },
+        { name: "Free Guides", href: "/#free-resources" },
       ],
     },
     {
       title: "Company",
       links: [
-        { name: "About", href: "#about" },
         { name: "Team", href: "/team" },
-        { name: "Careers", href: "#careers" },
-        { name: "Press", href: "#press" },
-        { name: "Contact", href: "#contact" },
+        { name: "Book a Demo", href: "/partner-intake" },
+        { name: "Contact", href: "/partner-intake" },
       ],
     },
   ]
@@ -61,7 +64,7 @@ export function Footer() {
               <span className="text-base md:text-[18px] font-semibold text-gray-900">OpenFlow AI</span>
             </div>
             <p className="mt-3 md:mt-4 text-sm md:text-[14px] leading-relaxed text-gray-600">
-              Enterprise-grade AI voice agents for modern businesses
+              AI voice agents that answer, qualify, and book — for modern businesses.
             </p>
           </div>
 
@@ -86,22 +89,22 @@ export function Footer() {
 
         <div className="mt-12 md:mt-16 border-t border-gray-200 pt-6 md:pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-xs md:text-[14px] text-gray-600">© 2025 OpenFlow AI. All rights reserved.</p>
+            <p className="text-xs md:text-[14px] text-gray-600">© {year} OpenFlow AI. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               <Link
-                href="#privacy"
+                href="/privacy"
                 className="text-xs md:text-[14px] text-gray-600 transition-colors hover:text-gray-900"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="#terms"
+                href="/terms"
                 className="text-xs md:text-[14px] text-gray-600 transition-colors hover:text-gray-900"
               >
                 Terms of Service
               </Link>
               <Link
-                href="#cookies"
+                href="/cookies"
                 className="text-xs md:text-[14px] text-gray-600 transition-colors hover:text-gray-900"
               >
                 Cookie Policy

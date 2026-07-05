@@ -1,6 +1,3 @@
-"use client"
-
-import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -28,31 +25,33 @@ export function FinalCTA() {
           </h2>
 
           {/* Subtext */}
-          <p className="mx-auto mt-4 md:mt-6 max-w-[600px] text-base md:text-lg lg:text-[20px] leading-relaxed text-gray-300 px-4">
-            See OpenFlow AI in action with a personalized demo tailored to your needs.
+          <p className="mx-auto mt-4 md:mt-6 max-w-[620px] text-base md:text-lg lg:text-[20px] leading-relaxed text-gray-300 px-4">
+            Book a personalized demo and see how OpenFlow AI handles your calls — or tap the phone button in the corner
+            to talk to a live AI agent right now.
           </p>
 
-          {/* Email form */}
-          <div className="mx-auto mt-8 md:mt-12 flex flex-col sm:flex-row max-w-[500px] items-stretch sm:items-center gap-3 px-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              className="h-12 md:h-14 flex-1 rounded-full border border-gray-600 bg-white/10 px-5 md:px-6 text-sm md:text-[16px] text-white shadow-sm backdrop-blur-sm placeholder:text-gray-400 focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400/30"
-            />
+          {/* CTA */}
+          <div className="mx-auto mt-8 md:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 px-4">
             <Link
               href="/partner-intake"
-              className="h-12 md:h-14 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] px-6 md:px-8 text-sm md:text-[16px] font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105 inline-flex items-center justify-center"
+              className="h-12 md:h-14 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] px-8 text-sm md:text-[16px] font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105 inline-flex items-center justify-center"
             >
-              Get a demo
+              Book a demo
               <svg className="ml-2 h-4 w-4 md:h-5 md:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
+            <Link
+              href="/how-it-works"
+              className="h-12 md:h-14 rounded-full border border-white/25 bg-white/5 px-8 text-sm md:text-[16px] font-semibold text-white transition-all hover:bg-white/10 inline-flex items-center justify-center"
+            >
+              See how it works
+            </Link>
           </div>
 
-          {/* Trust badge */}
+          {/* Honest reassurance */}
           <p className="mt-6 md:mt-8 text-xs md:text-[14px] text-gray-400 px-4">
-            Trusted by leading businesses across automotive, home services, and wellness industries
+            No long-term contracts — see it work on your own calls first.
           </p>
         </div>
       </div>

@@ -23,7 +23,7 @@ const ebooks = [
 
 export function FreeResources() {
   return (
-    <section className="bg-[#f8f9fb] px-4 md:px-8 py-16 md:py-24">
+    <section id="free-resources" className="scroll-mt-24 bg-[#f8f9fb] px-4 md:px-8 py-16 md:py-24">
       <div className="mx-auto max-w-[1200px]">
         <div className="text-center mb-10 md:mb-14">
           <p className="text-sm font-medium text-blue-600 mb-2">Free Resources</p>
