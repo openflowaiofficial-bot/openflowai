@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
 
   if (!apiKey || !agentId) {
     return NextResponse.json(
-      { error: "Retell API key or Agent ID not configured" },
+      { error: "Voice demo is not configured" },
       { status: 500 }
     )
   }
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
 
     if (!response.ok) {
       const errorData = await response.text()
-      console.error("[v0] Retell API error:", errorData)
+      console.error("Voice API error:", errorData)
       return NextResponse.json(
         { error: "Failed to create web call" },
         { status: response.status }

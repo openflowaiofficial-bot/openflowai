@@ -14,7 +14,7 @@ const practices = [
   {
     icon: ShieldCheck,
     title: "SOC 2-grade infrastructure",
-    body: "Built on Vercel and Retell — providers that maintain SOC 2 Type II compliance for the underlying platform.",
+    body: "Built on cloud infrastructure that maintains SOC 2 Type II compliance for the underlying platform.",
   },
   {
     icon: Activity,

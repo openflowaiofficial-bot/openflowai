@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li>Vercel — website hosting and privacy-friendly analytics.</li>
-          <li>Retell — powering the live AI voice demo.</li>
+          <li>A voice-AI infrastructure provider — powering the live AI voice demo.</li>
           <li>Cal.com — scheduling demo calls.</li>
           <li>n8n — routing your intake submissions to us.</li>
           <li>Apollo.io — website analytics, loaded only if you accept cookies.</li>

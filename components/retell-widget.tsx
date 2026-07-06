@@ -35,7 +35,7 @@ export function RetellWidget() {
     })
 
     client.on("error", (error: Error) => {
-      console.error("Retell error:", error)
+      console.error("Voice widget error:", error)
       setIsCallActive(false)
       setCallStatus("Error: " + error.message)
     })
