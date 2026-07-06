@@ -16,9 +16,9 @@ const features = [
   },
   {
     icon: RefreshCw,
-    title: "CRM Sync & Automation",
-    body: "Every call, lead, and detail flows straight into your CRM and through your workflows — with zero manual entry.",
-    href: "/automations",
+    title: "Built-in CRM + Ora",
+    body: "Every call and text lands as a lead — then Ora, your AI assistant, books, texts, and runs campaigns on command.",
+    href: "/products/crm",
   },
 ]
 

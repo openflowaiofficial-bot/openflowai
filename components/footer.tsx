@@ -19,19 +19,6 @@ export function Footer() {
       ],
     },
     {
-      title: "Solutions",
-      links: [
-        { name: "Car Dealerships", href: "/solutions/car-dealerships" },
-        { name: "Medical Offices", href: "/solutions/medical-offices" },
-        { name: "HVAC", href: "/solutions/hvac" },
-        { name: "Plumbers", href: "/solutions/plumbers" },
-        { name: "Home Services", href: "/solutions/handyman" },
-        { name: "Salons", href: "/solutions/salons" },
-        { name: "Spas & Wellness", href: "/solutions/spas" },
-        { name: "Insurance", href: "/solutions/insurance" },
-      ],
-    },
-    {
       title: "Resources",
       links: [
         { name: "How It Works", href: "/how-it-works" },
@@ -53,7 +40,7 @@ export function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white px-4 md:px-8 py-12 md:py-16">
       <div className="mx-auto max-w-[1200px]">
-        <div className="grid gap-8 md:gap-12 sm:grid-cols-2 md:grid-cols-5">
+        <div className="grid gap-8 md:gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2">
               <Image

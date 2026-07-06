@@ -19,14 +19,6 @@ const routes = [
   "/products/analytics",
   "/products/call-recording",
   "/products/lead-qualification",
-  "/solutions/car-dealerships",
-  "/solutions/medical-offices",
-  "/solutions/hvac",
-  "/solutions/plumbers",
-  "/solutions/handyman",
-  "/solutions/salons",
-  "/solutions/spas",
-  "/solutions/insurance",
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

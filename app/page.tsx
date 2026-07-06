@@ -1,6 +1,7 @@
 import Header from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Features } from "@/components/features"
+import { CrmShowcase } from "@/components/crm-showcase"
 import { PlatformShowcase } from "@/components/platform-showcase"
 import { CaseStudies } from "@/components/case-studies"
 import { Integrations } from "@/components/integrations"
@@ -16,6 +17,7 @@ export default function Page() {
       <Header />
       <Hero />
       <Features />
+      <CrmShowcase />
       <PlatformShowcase />
       <CaseStudies />
       <Integrations />
