@@ -305,17 +305,25 @@ function Header() {
             </Link>
           </nav>
 
-          {/* Desktop CTA Button */}
-          <Link
-            href="/partner-intake"
-            onClick={handleNavigation}
-            className="hidden sm:flex rounded-full bg-[#2563eb] px-4 md:px-6 py-2 text-sm md:text-[15px] font-medium text-white shadow-sm transition-all hover:bg-[#1d4ed8] hover:shadow-md items-center"
-          >
-            Get a demo
-            <svg className="ml-2 h-3 w-3 md:h-4 md:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          {/* Desktop actions */}
+          <div className="hidden sm:flex items-center gap-1 md:gap-2">
+            <a
+              href="https://login.openflowai.io"
+              className="rounded-md px-3 py-2 text-sm md:text-[15px] font-medium text-gray-600 transition-colors hover:text-gray-900 hover:bg-gray-100"
+            >
+              Log in
+            </a>
+            <Link
+              href="/partner-intake"
+              onClick={handleNavigation}
+              className="flex items-center rounded-full bg-[#2563eb] px-4 md:px-6 py-2 text-sm md:text-[15px] font-medium text-white shadow-sm transition-all hover:bg-[#1d4ed8] hover:shadow-md"
+            >
+              Get a demo
+              <svg className="ml-2 h-3 w-3 md:h-4 md:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -439,8 +447,14 @@ function Header() {
               Let&apos;s Talk
             </Link>
 
-            {/* CTA Button - Mobile */}
-            <div className="pt-4 border-t border-gray-200">
+            {/* CTA Buttons - Mobile */}
+            <div className="pt-4 border-t border-gray-200 space-y-2">
+              <a
+                href="https://login.openflowai.io"
+                className="w-full flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 text-base font-medium text-gray-900 transition-colors hover:bg-gray-50"
+              >
+                Log in
+              </a>
               <Link
                 href="/partner-intake"
                 onClick={handleNavigation}

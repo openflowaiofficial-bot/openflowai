@@ -31,6 +31,7 @@ export function Footer() {
       links: [
         { name: "Team", href: "/team" },
         { name: "Pricing", href: "/pricing" },
+        { name: "Log in", href: "https://login.openflowai.io" },
         { name: "Book a Demo", href: "/partner-intake" },
         { name: "Contact", href: "/partner-intake" },
       ],
