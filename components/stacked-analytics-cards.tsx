@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 const analyticsViews = [
   {
     title: "Call Performance",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-500 to-blue-600",
     metrics: [
       { label: "Total Calls", value: "12,547", change: "+23%" },
       { label: "Avg Duration", value: "4:32", change: "+12%" },
@@ -15,7 +15,7 @@ const analyticsViews = [
   },
   {
     title: "Customer Sentiment",
-    color: "from-purple-500 to-pink-500",
+    color: "from-blue-500 to-blue-600",
     metrics: [
       { label: "Positive", value: "87%", change: "+8%" },
       { label: "Neutral", value: "10%", change: "-3%" },
@@ -25,7 +25,7 @@ const analyticsViews = [
   },
   {
     title: "Revenue Impact",
-    color: "from-emerald-500 to-teal-500",
+    color: "from-blue-500 to-blue-600",
     metrics: [
       { label: "Revenue", value: "$847K", change: "+34%" },
       { label: "Conversions", value: "3,241", change: "+28%" },
@@ -35,7 +35,7 @@ const analyticsViews = [
   },
   {
     title: "AI Performance",
-    color: "from-orange-500 to-red-500",
+    color: "from-blue-500 to-blue-600",
     metrics: [
       { label: "Response Time", value: "1.2s", change: "-18%" },
       { label: "Accuracy", value: "96.8%", change: "+3.2%" },

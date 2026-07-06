@@ -130,7 +130,7 @@ export function RetellWidget() {
         className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white hover:scale-105 ${
           isCallActive 
             ? "bg-red-500 hover:bg-red-600" 
-            : "bg-gradient-to-r from-teal-500 to-teal-600"
+            : "bg-gradient-to-r from-blue-500 to-blue-600"
         }`}
         aria-label={isCallActive ? "End Call" : "Talk to AI"}
       >
@@ -146,7 +146,7 @@ export function RetellWidget() {
 
       {isOpen && (
         <div className="fixed bottom-28 right-6 z-50 w-[320px] max-w-[calc(100vw-48px)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-          <div className="bg-gradient-to-r from-teal-500 to-teal-600 p-4 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -174,9 +174,9 @@ export function RetellWidget() {
           <div className="p-6 flex flex-col items-center">
             {isCallActive ? (
               <>
-                <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mb-4 relative">
-                  <Phone className="w-8 h-8 text-teal-600" />
-                  <span className="absolute inset-0 rounded-full bg-teal-400 animate-ping opacity-25" />
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 relative">
+                  <Phone className="w-8 h-8 text-blue-600" />
+                  <span className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-25" />
                 </div>
                 <p className="text-base font-medium text-gray-900 mb-1">Speaking with AI</p>
                 <p className="text-sm text-gray-500 mb-5">{callStatus || "Speak naturally"}</p>

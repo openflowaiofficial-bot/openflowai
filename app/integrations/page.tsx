@@ -234,7 +234,7 @@ export default function IntegrationsPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0A1026] via-[#1a2742] to-[#0A1026] py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
         </div>
 
@@ -242,7 +242,7 @@ export default function IntegrationsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 sm:mb-6 leading-tight px-2">
               Connect to the Tools{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500">
                 You Already Use
               </span>
             </h1>
@@ -266,7 +266,7 @@ export default function IntegrationsPage() {
                 placeholder="Search integrations..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all text-sm sm:text-base"
+                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 outline-none transition-all text-sm sm:text-base"
               />
             </div>
 
@@ -278,8 +278,8 @@ export default function IntegrationsPage() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30"
-                      : "bg-white text-gray-700 border border-gray-200 hover:border-cyan-400 hover:bg-cyan-50"
+                      ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30"
+                      : "bg-white text-gray-700 border border-gray-200 hover:border-blue-400 hover:bg-blue-50"
                   }`}
                 >
                   {category}
@@ -307,13 +307,13 @@ export default function IntegrationsPage() {
               {filteredIntegrations.map((integration, index) => (
                 <div
                   key={index}
-                  className="group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-gray-200 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-1"
+                  className="group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 mb-4 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-cyan-50 group-hover:to-blue-50 transition-all duration-300">
+                    <div className="w-16 h-16 mb-4 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-blue-100 transition-all duration-300">
                       <Image
                         src={integration.logo || "/placeholder.svg"}
                         alt={integration.name}
@@ -343,7 +343,7 @@ export default function IntegrationsPage() {
           </p>
           <button
             onClick={() => setIsDemoModalOpen(true)}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 sm:px-10 sm:py-5 text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 sm:px-10 sm:py-5 text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5"
           >
             Request Integration
           </button>

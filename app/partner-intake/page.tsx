@@ -101,8 +101,8 @@ export default function PartnerIntakePage() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
-          <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-10 h-10 text-teal-600" />
+          <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle2 className="w-10 h-10 text-blue-600" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h1>
           <p className="text-lg text-gray-600 mb-8">
@@ -110,7 +110,7 @@ export default function PartnerIntakePage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Homepage
@@ -163,7 +163,7 @@ export default function PartnerIntakePage() {
                   required
                   value={formData.businessName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="Acme Auto Sales"
                 />
               </div>
@@ -178,7 +178,7 @@ export default function PartnerIntakePage() {
                   required
                   value={formData.ownerName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="John Smith"
                 />
               </div>
@@ -193,7 +193,7 @@ export default function PartnerIntakePage() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="john@acmeauto.com"
                 />
               </div>
@@ -208,7 +208,7 @@ export default function PartnerIntakePage() {
                   required
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -222,7 +222,7 @@ export default function PartnerIntakePage() {
                   required
                   value={formData.businessType}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors bg-white"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white"
                 >
                   <option value="">Select your industry...</option>
                   {businessTypes.map((type) => (
@@ -237,7 +237,7 @@ export default function PartnerIntakePage() {
                     name="otherBusinessType"
                     value={formData.otherBusinessType}
                     onChange={handleInputChange}
-                    className="w-full mt-3 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full mt-3 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="Please specify your industry..."
                   />
                 )}
@@ -252,7 +252,7 @@ export default function PartnerIntakePage() {
                   name="referredBy"
                   value={formData.referredBy}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="Name of person who referred you"
                 />
               </div>
@@ -273,7 +273,7 @@ export default function PartnerIntakePage() {
                     key={method}
                     className={`flex items-center gap-2 p-3 border rounded-lg cursor-pointer transition-colors ${
                       formData.currentMethods.includes(method)
-                        ? "border-teal-500 bg-teal-50 text-teal-700"
+                        ? "border-blue-500 bg-blue-50 text-blue-700"
                         : "border-gray-200 hover:border-gray-300"
                     }`}
                   >
@@ -286,7 +286,7 @@ export default function PartnerIntakePage() {
                     <div
                       className={`w-4 h-4 rounded border flex items-center justify-center ${
                         formData.currentMethods.includes(method)
-                          ? "bg-teal-500 border-teal-500"
+                          ? "bg-blue-500 border-blue-500"
                           : "border-gray-300"
                       }`}
                     >
@@ -316,7 +316,7 @@ export default function PartnerIntakePage() {
                 name="monthlyVolume"
                 value={formData.monthlyVolume}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 placeholder="e.g., 500 calls/month, 200 inbound + 300 outbound"
               />
             </div>
@@ -331,7 +331,7 @@ export default function PartnerIntakePage() {
                 name="advertisingSpend30Days"
                 value={formData.advertisingSpend30Days}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 placeholder="e.g., $5,000 on Google Ads, $2,000 on Facebook"
               />
             </div>
@@ -346,7 +346,7 @@ export default function PartnerIntakePage() {
                 name="crmUsed"
                 value={formData.crmUsed}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 placeholder="e.g., Salesforce, HubSpot, GoHighLevel, None"
               />
             </div>
@@ -361,7 +361,7 @@ export default function PartnerIntakePage() {
                 rows={3}
                 value={formData.missedCallSystem}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors resize-none"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                 placeholder="e.g., Voicemail, answering service, call forwarding to cell, nothing currently in place..."
               />
             </div>
@@ -376,7 +376,7 @@ export default function PartnerIntakePage() {
                 rows={3}
                 value={formData.customerGeneration}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors resize-none"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                 placeholder="e.g., Google Ads, Facebook Ads, referrals, SEO, direct mail, word of mouth..."
               />
             </div>
@@ -397,7 +397,7 @@ export default function PartnerIntakePage() {
                   rows={3}
                   value={formData.painPoints}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors resize-none"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                   placeholder="e.g., $500 per service call, $30,000 per vehicle sale, $2,000 per new patient..."
                 />
               </div>
@@ -412,7 +412,7 @@ export default function PartnerIntakePage() {
                   rows={3}
                   value={formData.successLooksLike}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors resize-none"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                   placeholder="e.g., 20-30 missed calls per week, 50+ after-hours inquiries, 10 voicemails we don't get to..."
                 />
               </div>
@@ -427,7 +427,7 @@ export default function PartnerIntakePage() {
                   rows={3}
                   value={formData.missedOpportunityCost}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors resize-none"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                   placeholder="e.g., A missed call could mean losing a $5,000 sale, or a patient going to a competitor..."
                 />
               </div>
@@ -439,7 +439,7 @@ export default function PartnerIntakePage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 disabled:bg-teal-400 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-teal-500/25 min-w-[200px]"
+              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-blue-500/25 min-w-[200px]"
             >
               {isSubmitting ? (
                 <>

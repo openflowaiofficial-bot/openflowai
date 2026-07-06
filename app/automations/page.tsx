@@ -17,7 +17,7 @@ export default function AutomationsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-1.5 sm:py-2 mb-6 sm:mb-8 backdrop-blur-sm border border-white/20">
               <svg
-                className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-400"
+                className="h-3 w-3 sm:h-4 sm:w-4 text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ export default function AutomationsPage() {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 sm:mb-6 leading-tight px-2">
               Automate Your Business with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">
                 Intelligent AI Agents
               </span>
             </h1>
@@ -41,7 +41,7 @@ export default function AutomationsPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <a
                 href="/partner-intake"
-                className="rounded-full bg-cyan-500 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg transition-all duration-200 hover:bg-cyan-600 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-center"
+                className="rounded-full bg-blue-500 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg transition-all duration-200 hover:bg-blue-600 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-center"
               >
                 Get Started
               </a>
@@ -71,8 +71,8 @@ export default function AutomationsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4">
               {/* Appointment Scheduling */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-lg">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -89,7 +89,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -99,7 +99,7 @@ export default function AutomationsPage() {
                     <span>Real-time calendar sync</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -109,7 +109,7 @@ export default function AutomationsPage() {
                     <span>Automatic reminders</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -122,8 +122,8 @@ export default function AutomationsPage() {
               </div>
 
               {/* CRM Updates */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -140,7 +140,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -150,7 +150,7 @@ export default function AutomationsPage() {
                     <span>Call transcripts logged</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -160,7 +160,7 @@ export default function AutomationsPage() {
                     <span>Lead status updates</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -173,7 +173,7 @@ export default function AutomationsPage() {
               </div>
 
               {/* Follow-up Messages */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -191,7 +191,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -201,7 +201,7 @@ export default function AutomationsPage() {
                     <span>Personalized messaging</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -211,7 +211,7 @@ export default function AutomationsPage() {
                     <span>Triggered by outcomes</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -224,8 +224,8 @@ export default function AutomationsPage() {
               </div>
 
               {/* Lead Qualification */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -242,7 +242,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -252,7 +252,7 @@ export default function AutomationsPage() {
                     <span>AI-powered scoring</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -262,7 +262,7 @@ export default function AutomationsPage() {
                     <span>Smart routing</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -275,8 +275,8 @@ export default function AutomationsPage() {
               </div>
 
               {/* Payment Collection */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 shadow-lg">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -293,7 +293,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -303,7 +303,7 @@ export default function AutomationsPage() {
                     <span>Secure payment links</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -313,7 +313,7 @@ export default function AutomationsPage() {
                     <span>Deposit collection</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -326,8 +326,8 @@ export default function AutomationsPage() {
               </div>
 
               {/* Team Notifications */}
-              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-cyan-300 hover:shadow-xl bg-white">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 shadow-lg">
+              <div className="group rounded-2xl border border-gray-200 p-8 transition-all hover:border-blue-300 hover:shadow-xl bg-white">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -343,7 +343,7 @@ export default function AutomationsPage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -353,7 +353,7 @@ export default function AutomationsPage() {
                     <span>Instant notifications</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -363,7 +363,7 @@ export default function AutomationsPage() {
                     <span>Custom triggers</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <svg className="h-4 w-4 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -395,14 +395,14 @@ export default function AutomationsPage() {
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8 px-4">
               {/* Step 1 */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-cyan-100">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 sm:p-8 border border-blue-100">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 sm:w-24 sm:h-24">
                       <RotatingGear />
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cyan-500 text-white font-bold text-sm mb-4">
+                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white font-bold text-sm mb-4">
                       1
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3">Configure Triggers</h3>
@@ -416,14 +416,14 @@ export default function AutomationsPage() {
 
               {/* Step 2 */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 sm:p-8 border border-purple-100">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 sm:p-8 border border-blue-100">
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 sm:w-24 sm:h-24">
                       <PulsingBrain />
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-500 text-white font-bold text-sm mb-4">
+                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white font-bold text-sm mb-4">
                       2
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3">AI Detects Intent</h3>

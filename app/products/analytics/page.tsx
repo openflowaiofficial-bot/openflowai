@@ -11,7 +11,7 @@ export default function AnalyticsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 mb-6 backdrop-blur-sm border border-white/20">
-              <svg className="h-5 w-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -27,7 +27,7 @@ export default function AnalyticsPage() {
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               Get actionable insights from every customer interaction with comprehensive analytics dashboards.
             </p>
-            <button className="rounded-full bg-cyan-500 px-8 py-4 text-base md:text-lg font-medium text-white shadow-lg hover:bg-cyan-600 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto">
+            <button className="rounded-full bg-blue-500 px-8 py-4 text-base md:text-lg font-medium text-white shadow-lg hover:bg-blue-600 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto">
               Get Started
             </button>
           </div>
@@ -58,10 +58,10 @@ export default function AnalyticsPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-2xl bg-white border border-gray-200 p-4 sm:p-6 hover:border-cyan-300 hover:shadow-lg transition-all group"
+                  className="rounded-2xl bg-white border border-gray-200 p-4 sm:p-6 hover:border-blue-300 hover:shadow-lg transition-all group"
                 >
                   <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{item.icon}</div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-900 group-hover:text-cyan-600 transition-colors">
+                  <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {item.metric}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>

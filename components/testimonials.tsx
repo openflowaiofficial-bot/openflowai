@@ -22,7 +22,7 @@ export function Testimonials() {
     <section className="bg-white px-4 md:px-8 py-20 md:py-32">
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-12 md:mb-20 text-center px-4">
-          <p className="mb-3 md:mb-4 text-xs md:text-sm font-semibold uppercase tracking-wide text-[#4F46E5]">
+          <p className="mb-3 md:mb-4 text-xs md:text-sm font-semibold uppercase tracking-wide text-[#2563eb]">
             Customer Success
           </p>
           <h2 className="text-balance text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
@@ -38,7 +38,7 @@ export function Testimonials() {
             >
               <div className="mb-4 md:mb-6 flex-1">
                 <svg
-                  className="mb-3 md:mb-4 h-6 w-6 md:h-8 md:w-8 text-[#4F46E5] opacity-30"
+                  className="mb-3 md:mb-4 h-6 w-6 md:h-8 md:w-8 text-[#2563eb] opacity-30"
                   fill="currentColor"
                   viewBox="0 0 32 32"
                 >
@@ -55,14 +55,14 @@ export function Testimonials() {
                     className="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover"
                   />
                 ) : (
-                  <div className="h-12 w-12 md:h-14 md:w-14 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] flex items-center justify-center text-white font-bold text-lg md:text-xl">
+                  <div className="h-12 w-12 md:h-14 md:w-14 rounded-full bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-white font-bold text-lg md:text-xl">
                     {testimonial.author.split(" ").map(n => n[0]).join("")}
                   </div>
                 )}
                 <div>
                   <p className="text-sm md:text-base font-semibold text-gray-900">{testimonial.author}</p>
                   <p className="text-xs md:text-sm text-gray-600">{testimonial.role}</p>
-                  <p className="text-xs md:text-sm font-medium text-[#4F46E5]">{testimonial.company}</p>
+                  <p className="text-xs md:text-sm font-medium text-[#2563eb]">{testimonial.company}</p>
                 </div>
               </div>
             </div>

@@ -30,7 +30,7 @@ function AnimatedSMSIcon() {
             shape === 0 ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
         >
-          <div className="w-full h-full rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shadow-xl">
+          <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-xl">
             <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -119,7 +119,7 @@ export default function SMSAutomationPage() {
               <AnimatedSMSIcon />
 
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6 px-2">
-                <span className="text-cyan-400">
+                <span className="text-blue-400">
                   <RotatingText />
                 </span>{" "}
                 <span className="text-white">Customer Engagement with SMS</span>
@@ -132,7 +132,7 @@ export default function SMSAutomationPage() {
 
               <button
                 onClick={() => setIsDemoModalOpen(true)}
-                className="rounded-full bg-cyan-600 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg hover:bg-cyan-700 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
+                className="rounded-full bg-blue-600 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white shadow-lg hover:bg-blue-700 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 Get Started
               </button>
@@ -192,7 +192,7 @@ export default function SMSAutomationPage() {
                     ))}
                   </ul>
                   <div className="flex gap-3 sm:gap-4 pt-4">
-                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-3 sm:p-4 flex-1">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
                       <div className="text-xl sm:text-2xl font-bold text-blue-600">99.8%</div>
                       <div className="text-xs sm:text-sm text-gray-600">Uptime</div>
                     </div>
@@ -208,7 +208,7 @@ export default function SMSAutomationPage() {
             <div className="mb-16 md:mb-24 lg:mb-32">
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="space-y-4 sm:space-y-6 px-4">
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs sm:text-sm font-medium">
+                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs sm:text-sm font-medium">
                     Smart Scheduling
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Appointment Reminders</h3>
@@ -237,12 +237,12 @@ export default function SMSAutomationPage() {
                     ))}
                   </ul>
                   <div className="flex gap-3 sm:gap-4 pt-4">
-                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-indigo-600">80%</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">80%</div>
                       <div className="text-xs sm:text-sm text-gray-600">Fewer No-Shows</div>
                     </div>
-                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-purple-600">3x</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">3x</div>
                       <div className="text-xs sm:text-sm text-gray-600">More Confirmations</div>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ export default function SMSAutomationPage() {
                   <SMSSequenceDemo />
                 </div>
                 <div className="order-1 lg:order-2 space-y-4 sm:space-y-6 px-4">
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-100 text-orange-700 text-xs sm:text-sm font-medium">
+                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs sm:text-sm font-medium">
                     Lead Nurturing
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Follow-Up Sequences</h3>
@@ -288,12 +288,12 @@ export default function SMSAutomationPage() {
                     ))}
                   </ul>
                   <div className="flex gap-3 sm:gap-4 pt-4">
-                    <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-orange-600">45%</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">45%</div>
                       <div className="text-xs sm:text-sm text-gray-600">Higher Conversion</div>
                     </div>
-                    <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-yellow-600">4.2x</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">4.2x</div>
                       <div className="text-xs sm:text-sm text-gray-600">Better ROI</div>
                     </div>
                   </div>
@@ -304,7 +304,7 @@ export default function SMSAutomationPage() {
             <div className="mb-16 md:mb-24 lg:mb-32">
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="space-y-4 sm:space-y-6 px-4">
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-teal-100 text-teal-700 text-xs sm:text-sm font-medium">
+                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs sm:text-sm font-medium">
                     Intelligent Chat
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Two-Way Conversations</h3>
@@ -333,12 +333,12 @@ export default function SMSAutomationPage() {
                     ))}
                   </ul>
                   <div className="flex gap-3 sm:gap-4 pt-4">
-                    <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-teal-600">92%</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">92%</div>
                       <div className="text-xs sm:text-sm text-gray-600">Satisfaction Rate</div>
                     </div>
-                    <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-3 sm:p-4 flex-1">
-                      <div className="text-xl sm:text-2xl font-bold text-cyan-600">5.8x</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 flex-1">
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">5.8x</div>
                       <div className="text-xs sm:text-sm text-gray-600">Faster Resolution</div>
                     </div>
                   </div>

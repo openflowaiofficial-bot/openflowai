@@ -12,7 +12,7 @@ export default function HowItWorksPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-[#0A1026] via-[#1a2742] to-[#0A1026] py-16 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl" />
+            <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
           </div>
 
@@ -20,7 +20,7 @@ export default function HowItWorksPage() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 md:mb-6 leading-tight px-4">
                 How{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500">
                   OpenFlow AI
                 </span>{" "}
                 Works
@@ -40,8 +40,8 @@ export default function HowItWorksPage() {
               {/* Step 1 */}
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24">
                 <div className="order-2 md:order-1 px-2">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-100 to-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 mb-4 md:mb-6">
-                    <span className="text-xs sm:text-sm font-semibold text-cyan-700">Step 1</span>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 mb-4 md:mb-6">
+                    <span className="text-xs sm:text-sm font-semibold text-blue-700">Step 1</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-4 md:mb-6">
                     Configure Your AI Agent
@@ -58,7 +58,7 @@ export default function HowItWorksPage() {
                       "Connect your calendar and CRM",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-2 md:gap-3">
-                        <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-cyan-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-blue-500 flex-shrink-0 mt-0.5" />
                         <span className="text-sm md:text-base text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -66,15 +66,15 @@ export default function HowItWorksPage() {
                 </div>
                 <div className="order-1 md:order-2 px-2">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl blur-3xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl blur-3xl opacity-20" />
                     <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl border border-gray-200 shadow-2xl">
-                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 mx-auto mb-6">
+                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mx-auto mb-6">
                         <Phone className="w-10 h-10 text-white" />
                       </div>
                       <div className="space-y-4">
                         <div className="h-3 bg-gray-200 rounded-full w-3/4 mx-auto" />
                         <div className="h-3 bg-gray-200 rounded-full w-full" />
-                        <div className="h-3 bg-cyan-200 rounded-full w-5/6 mx-auto" />
+                        <div className="h-3 bg-blue-200 rounded-full w-5/6 mx-auto" />
                         <div className="h-3 bg-gray-200 rounded-full w-2/3 mx-auto" />
                       </div>
                     </div>
@@ -86,9 +86,9 @@ export default function HowItWorksPage() {
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24">
                 <div>
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl blur-3xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl blur-3xl opacity-20" />
                     <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl border border-gray-200 shadow-2xl">
-                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 mx-auto mb-6">
+                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mx-auto mb-6">
                         <Brain className="w-10 h-10 text-white" />
                       </div>
                       <div className="space-y-3">
@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
                           "Processing request...",
                         ].map((text, index) => (
                           <div key={index} className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 animate-pulse" />
+                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 animate-pulse" />
                             <span className="text-sm text-gray-600">{text}</span>
                           </div>
                         ))}
@@ -108,8 +108,8 @@ export default function HowItWorksPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 mb-6">
-                    <span className="text-sm font-semibold text-purple-700">Step 2</span>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-100 px-4 py-2 mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Step 2</span>
                   </div>
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
                     AI Handles Every Interaction
@@ -126,7 +126,7 @@ export default function HowItWorksPage() {
                       "Seamless CRM integration and logging",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -211,9 +211,9 @@ export default function HowItWorksPage() {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-8 rounded-2xl bg-white border border-gray-200 hover:border-cyan-400 hover:shadow-xl transition-all duration-300"
+                  className="text-center p-8 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 mb-2">
+                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-600 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-xl font-semibold text-gray-900 mb-3">{stat.label}</div>
@@ -234,7 +234,7 @@ export default function HowItWorksPage() {
             </p>
             <a
               href="/partner-intake"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               Get a Demo <ArrowRight className="w-5 h-5" />
             </a>

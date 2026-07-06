@@ -100,10 +100,10 @@ export function CaseStudies() {
               </h3>
               <div className="space-y-4 sm:space-y-5 md:space-y-6">
                 {caseStudy.results.map((result, idx) => (
-                  <div key={idx} className="border-l-4 border-cyan-400/60 pl-4">
+                  <div key={idx} className="border-l-4 border-blue-400/60 pl-4">
                     <div className="mb-1.5 flex items-baseline gap-2">
                       <span className="text-3xl sm:text-4xl md:text-4xl font-bold text-white">{result.metric}</span>
-                      <span className="text-base md:text-lg text-cyan-300">{result.value}</span>
+                      <span className="text-base md:text-lg text-blue-300">{result.value}</span>
                     </div>
                     <p className="text-sm md:text-base leading-relaxed text-white/90">{result.description}</p>
                   </div>
@@ -136,7 +136,7 @@ export function CaseStudies() {
               {/* Service Revenue Impact */}
               <div className="mt-6 sm:mt-7 md:mt-8 border-t border-white/20 pt-5 sm:pt-6">
                 <p className="text-sm font-medium text-white/80 mb-4">Service Department Impact</p>
-                <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-xl p-4 mb-4">
+                <div className="bg-gradient-to-r from-blue-500/20 to-blue-500/20 rounded-xl p-4 mb-4">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-white/90 text-sm">Service Calls Handled</span>
                     <span className="text-2xl font-bold text-white">1,832</span>
@@ -161,7 +161,7 @@ export function CaseStudies() {
               {/* Sales Revenue Impact */}
               <div className="mt-6 sm:mt-7 md:mt-8 border-t border-white/20 pt-5 sm:pt-6">
                 <p className="text-sm font-medium text-white/80 mb-4">Sales Department Impact</p>
-                <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-4 mb-4">
+                <div className="bg-gradient-to-r from-blue-500/20 to-blue-500/20 rounded-xl p-4 mb-4">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-white/90 text-sm">Sales Calls Qualified</span>
                     <span className="text-2xl font-bold text-white">935</span>
@@ -170,13 +170,13 @@ export function CaseStudies() {
                 
                 <p className="text-xs text-white/60 mb-3">Estimated Vehicles Sold (8% phone lead conversion)</p>
                 <div className="bg-white/10 rounded-lg p-4 text-center mb-4">
-                  <p className="text-3xl font-bold text-cyan-400">~75</p>
+                  <p className="text-3xl font-bold text-blue-400">~75</p>
                   <p className="text-xs text-white/50 mt-1">vehicles sold</p>
                 </div>
 
                 <p className="text-xs text-white/60 mb-3">Estimated Gross Profit</p>
                 <div className="bg-white/10 rounded-lg p-4 text-center">
-                  <p className="text-3xl font-bold text-cyan-400">$187K</p>
+                  <p className="text-3xl font-bold text-blue-400">$187K</p>
                   <p className="text-xs text-white/50 mt-1">75 × $2,500</p>
                 </div>
               </div>

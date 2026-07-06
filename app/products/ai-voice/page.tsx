@@ -116,7 +116,7 @@ export default function AIVoicePage() {
             {/* Feature 2 - Smart Scheduling - Demo Right */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24 lg:mb-32">
               <div className="px-4">
-                <div className="inline-block bg-purple-100 text-purple-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                <div className="inline-block bg-blue-100 text-blue-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                   Smart Scheduling
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
@@ -161,7 +161,7 @@ export default function AIVoicePage() {
                 <CRMIntegrationDemo />
               </div>
               <div className="order-1 md:order-2 px-4">
-                <div className="inline-block bg-teal-100 text-teal-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                <div className="inline-block bg-blue-100 text-blue-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                   Seamless Integration
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Sync with your existing CRM</h3>
@@ -195,7 +195,7 @@ export default function AIVoicePage() {
             {/* Feature 4 - Analytics - Demo Right */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24 lg:mb-32">
               <div className="px-4">
-                <div className="inline-block bg-orange-100 text-orange-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                <div className="inline-block bg-blue-100 text-blue-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                   Insights & Analytics
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
@@ -249,7 +249,7 @@ export default function AIVoicePage() {
                       <div className="text-slate-300 text-sm mb-3">Live Transcription</div>
                       <div className="space-y-2 text-sm">
                         <p className="text-slate-400">
-                          <span className="text-cyan-400">Customer:</span> I need to reschedule my appointment for next
+                          <span className="text-blue-400">Customer:</span> I need to reschedule my appointment for next
                           week.
                         </p>
                         <p className="text-slate-400">
@@ -268,7 +268,7 @@ export default function AIVoicePage() {
                         <div className="text-white font-semibold">96%</div>
                       </div>
                       <div className="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
-                        <div className="text-purple-400 text-xs">Tags</div>
+                        <div className="text-blue-400 text-xs">Tags</div>
                         <div className="text-white font-semibold">3</div>
                       </div>
                     </div>
@@ -315,7 +315,7 @@ export default function AIVoicePage() {
             {/* Feature 6 - Lead Qualification */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-24 lg:mb-32">
               <div className="px-4">
-                <div className="inline-block bg-indigo-100 text-indigo-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                <div className="inline-block bg-blue-100 text-blue-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                   Smart Routing
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
@@ -347,7 +347,7 @@ export default function AIVoicePage() {
                 </ul>
               </div>
               <div className="px-4">
-                <div className="relative bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-8 shadow-2xl">
+                <div className="relative bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 shadow-2xl">
                   <div className="space-y-4">
                     <div className="text-white font-semibold mb-6">Lead Scoring Dashboard</div>
                     <div className="space-y-3">

@@ -36,7 +36,7 @@ function AnimatedMessageIcon() {
             shape === 1 ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
         >
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center shadow-xl">
+          <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-xl">
             <Calendar className="w-12 h-12 text-white" strokeWidth={2} />
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function AppointmentPage() {
                   <CalendarSyncDemo />
                 </div>
                 <div className="order-1 md:order-2">
-                  <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
+                  <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
                     Integration
                   </span>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-gray-900">
@@ -108,26 +108,26 @@ export default function AppointmentPage() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Two-way sync with all major calendar platforms</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Automatic conflict detection and prevention</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Instant updates across all devices</span>
                     </li>
                   </ul>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="p-5 bg-white rounded-xl shadow-sm border border-purple-100">
-                      <p className="text-2xl font-semibold text-purple-700">100%</p>
-                      <p className="text-sm text-purple-600 mt-1">Sync accuracy</p>
+                    <div className="p-5 bg-white rounded-xl shadow-sm border border-blue-100">
+                      <p className="text-2xl font-semibold text-blue-700">100%</p>
+                      <p className="text-sm text-blue-600 mt-1">Sync accuracy</p>
                     </div>
-                    <div className="p-5 bg-white rounded-xl shadow-sm border border-purple-100">
-                      <p className="text-2xl font-semibold text-purple-700">&lt;1s</p>
-                      <p className="text-sm text-purple-600 mt-1">Sync speed</p>
+                    <div className="p-5 bg-white rounded-xl shadow-sm border border-blue-100">
+                      <p className="text-2xl font-semibold text-blue-700">&lt;1s</p>
+                      <p className="text-sm text-blue-600 mt-1">Sync speed</p>
                     </div>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export default function AppointmentPage() {
               {/* Feature 4: End-to-End Booking Flow */}
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                  <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-4">
+                  <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
                     Complete Solution
                   </span>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-gray-900">
@@ -234,26 +234,26 @@ export default function AppointmentPage() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Handles initial inquiry to final confirmation</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Automatic follow-ups and rescheduling requests</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">Integration with payment processing if needed</span>
                     </li>
                   </ul>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="p-5 bg-white rounded-xl shadow-sm border border-orange-100">
-                      <p className="text-2xl font-semibold text-orange-700">45s</p>
-                      <p className="text-sm text-orange-600 mt-1">Avg. booking time</p>
+                    <div className="p-5 bg-white rounded-xl shadow-sm border border-blue-100">
+                      <p className="text-2xl font-semibold text-blue-700">45s</p>
+                      <p className="text-sm text-blue-600 mt-1">Avg. booking time</p>
                     </div>
-                    <div className="p-5 bg-white rounded-xl shadow-sm border border-orange-100">
-                      <p className="text-2xl font-semibold text-orange-700">24/7</p>
-                      <p className="text-sm text-orange-600 mt-1">Available</p>
+                    <div className="p-5 bg-white rounded-xl shadow-sm border border-blue-100">
+                      <p className="text-2xl font-semibold text-blue-700">24/7</p>
+                      <p className="text-sm text-blue-600 mt-1">Available</p>
                     </div>
                   </div>
                 </div>

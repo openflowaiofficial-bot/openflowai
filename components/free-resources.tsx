@@ -9,7 +9,7 @@ const ebooks = [
     description: "Discover how two business owners made different choices about AI automation — and how it transformed their results.",
     href: "/ebooks/the-prodigal-ai.pdf",
     downloadName: "The-Prodigal-AI-OpenFlow.pdf",
-    color: "from-blue-500 to-indigo-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     title: "The Wholesaler's Edge",
@@ -17,7 +17,7 @@ const ebooks = [
     description: "Learn how AI voice agents are revolutionizing lead capture and customer service in wholesale businesses.",
     href: "/ebooks/the-wholesalers-edge.pdf",
     downloadName: "The-Wholesalers-Edge-OpenFlow.pdf",
-    color: "from-emerald-500 to-teal-600",
+    color: "from-blue-500 to-blue-600",
   },
 ]
 

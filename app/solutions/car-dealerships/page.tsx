@@ -13,13 +13,13 @@ export default function CarDealershipsPage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-32 md:pb-28">
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
-          <div className="absolute top-20 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
 
           <div className="container relative mx-auto px-4 sm:px-6 md:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 border border-cyan-500/20">
-                <svg className="h-4 w-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 border border-blue-500/20">
+                <svg className="h-4 w-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -33,11 +33,11 @@ export default function CarDealershipsPage() {
                     d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
                   />
                 </svg>
-                <span className="text-sm font-medium text-cyan-400">Automotive Solutions</span>
+                <span className="text-sm font-medium text-blue-400">Automotive Solutions</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 sm:mb-6 leading-tight px-2">
-                Never Miss a Lead at Your <span className="text-cyan-400">Dealership</span>
+                Never Miss a Lead at Your <span className="text-blue-400">Dealership</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
@@ -48,7 +48,7 @@ export default function CarDealershipsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/partner-intake"
-                  className="rounded-full bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-lg font-medium shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/30 text-center"
+                  className="rounded-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 text-center"
                 >
                   Schedule Demo
                 </Link>
@@ -115,9 +115,9 @@ export default function CarDealershipsPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Sales Inquiries */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
-                <div className="w-14 h-14 rounded-xl bg-cyan-50 flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
-                  <svg className="h-7 w-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
+                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                  <svg className="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -132,19 +132,19 @@ export default function CarDealershipsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Real-time inventory lookup
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Financing pre-qualification
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Trade-in value estimates
@@ -153,7 +153,7 @@ export default function CarDealershipsPage() {
               </div>
 
               {/* Test Drive Scheduling */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
                 <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
                   <svg className="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -191,7 +191,7 @@ export default function CarDealershipsPage() {
               </div>
 
               {/* Service Department */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
                 <div className="w-14 h-14 rounded-xl bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-100 transition-colors">
                   <svg className="h-7 w-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -235,9 +235,9 @@ export default function CarDealershipsPage() {
               </div>
 
               {/* Lead Qualification */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
-                <div className="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center mb-6 group-hover:bg-purple-100 transition-colors">
-                  <svg className="h-7 w-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
+                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                  <svg className="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -252,19 +252,19 @@ export default function CarDealershipsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Budget assessment
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Timeline detection
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Hot lead alerts
@@ -273,9 +273,9 @@ export default function CarDealershipsPage() {
               </div>
 
               {/* After-Hours Support */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
-                <div className="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
-                  <svg className="h-7 w-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
+                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                  <svg className="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -290,19 +290,19 @@ export default function CarDealershipsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Weekend & holiday coverage
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Emergency service routing
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Next-day callback scheduling
@@ -311,9 +311,9 @@ export default function CarDealershipsPage() {
               </div>
 
               {/* Follow-Up Automation */}
-              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-cyan-200">
-                <div className="w-14 h-14 rounded-xl bg-rose-50 flex items-center justify-center mb-6 group-hover:bg-rose-100 transition-colors">
-                  <svg className="h-7 w-7 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200">
+                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                  <svg className="h-7 w-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -328,19 +328,19 @@ export default function CarDealershipsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Drip campaign sequences
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Price drop notifications
                   </li>
                   <li className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Service reminder campaigns
@@ -365,8 +365,8 @@ export default function CarDealershipsPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                      <span className="text-cyan-400 font-semibold text-sm">DMS</span>
+                    <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                      <span className="text-blue-400 font-semibold text-sm">DMS</span>
                     </div>
                     <span className="text-white font-medium">Dealer Management</span>
                   </div>
@@ -383,15 +383,15 @@ export default function CarDealershipsPage() {
                     <span className="text-white font-medium">Inventory Sync</span>
                   </div>
                   <div className="rounded-xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                      <span className="text-purple-400 font-semibold text-sm">CAL</span>
+                    <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                      <span className="text-blue-400 font-semibold text-sm">CAL</span>
                     </div>
                     <span className="text-white font-medium">Calendar Systems</span>
                   </div>
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-8 border border-white/10">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-500/20 p-8 border border-white/10">
                   <div className="h-full rounded-xl bg-slate-800/50 backdrop-blur-sm p-6 flex flex-col justify-between">
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
@@ -410,7 +410,7 @@ export default function CarDealershipsPage() {
                     <div className="rounded-lg bg-slate-700/50 p-4">
                       <div className="text-xs text-gray-400 mb-2">Last synced activity</div>
                       <div className="text-white font-medium">New lead: John D. - 2024 Toyota Camry inquiry</div>
-                      <div className="text-cyan-400 text-sm mt-1">Auto-assigned to Sarah M.</div>
+                      <div className="text-blue-400 text-sm mt-1">Auto-assigned to Sarah M.</div>
                     </div>
                   </div>
                 </div>
@@ -432,7 +432,7 @@ export default function CarDealershipsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/partner-intake"
-                  className="rounded-full bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-lg font-medium text-center"
+                  className="rounded-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium text-center"
                 >
                   Get Started Free
                 </Link>

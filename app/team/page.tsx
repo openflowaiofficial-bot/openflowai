@@ -23,7 +23,7 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#3FBBD0] mb-4">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#2563eb] mb-4">
             Our Team
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight text-balance mb-6">
@@ -56,7 +56,7 @@ export default function TeamPage() {
 
                 {/* Info */}
                 <div className="p-6 sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-wider text-[#3FBBD0] mb-1">
+                  <p className="text-sm font-semibold uppercase tracking-wider text-[#2563eb] mb-1">
                     {member.role}
                   </p>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
@@ -84,7 +84,7 @@ export default function TeamPage() {
             </p>
             <a
               href="/partner-intake"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#3FBBD0] text-white font-semibold rounded-full hover:bg-[#35a5b8] transition-colors duration-200 text-base sm:text-lg"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#2563eb] text-white font-semibold rounded-full hover:bg-[#1d4ed8] transition-colors duration-200 text-base sm:text-lg"
             >
               Get a Demo
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -22,24 +22,24 @@ export default function SpasPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-[#1a2332] via-[#2a3f5f] to-[#1a2332] py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-pink-500 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div
-                className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 px-5 py-2.5 mb-8 border border-pink-500/30 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/20 to-blue-500/20 px-5 py-2.5 mb-8 border border-blue-500/30 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               >
-                <Sparkles className="w-4 h-4 text-pink-400" />
-                <span className="text-sm font-medium text-pink-300">Spas & Wellness Centers</span>
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-medium text-blue-300">Spas & Wellness Centers</span>
               </div>
 
               <h1
                 className={`text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 leading-tight transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               >
                 Elevate Your Spa Experience with{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">
                   AI-Powered Booking
                 </span>
               </h1>
@@ -56,7 +56,7 @@ export default function SpasPage() {
               >
                 <button
                   onClick={() => setIsDemoModalOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transition-all duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Start Free Trial
                 </button>
@@ -82,8 +82,8 @@ export default function SpasPage() {
                 { value: "4.9", label: "Client Satisfaction", icon: Star },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-pink-100 to-purple-100 mb-4">
-                    <stat.icon className="w-6 h-6 text-pink-600" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-blue-100 mb-4">
+                    <stat.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
@@ -159,13 +159,13 @@ export default function SpasPage() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-8 rounded-2xl bg-white border border-gray-100 hover:border-pink-200 hover:shadow-xl hover:shadow-pink-500/5 transition-all duration-300"
+                  className="group p-8 rounded-2xl bg-white border border-gray-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300"
                 >
                   <div
-                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color === "pink" ? "from-pink-100 to-pink-50" : "from-purple-100 to-purple-50"} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color === "pink" ? "from-blue-100 to-blue-50" : "from-blue-100 to-blue-50"} mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <feature.icon
-                      className={`w-7 h-7 ${feature.color === "pink" ? "text-pink-600" : "text-purple-600"}`}
+                      className={`w-7 h-7 ${feature.color === "pink" ? "text-blue-600" : "text-blue-600"}`}
                     />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
@@ -185,7 +185,7 @@ export default function SpasPage() {
             </p>
             <button
               onClick={() => setIsDemoModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-pink-500/25 transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               Get a Demo
             </button>

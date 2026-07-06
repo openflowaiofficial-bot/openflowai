@@ -70,7 +70,7 @@ function Header() {
                       <div>
                         <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">Platform</h3>
                         <div className="space-y-3">
-                          <div className="mb-6 overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+                          <div className="mb-6 overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-6">
                             {/* Dashboard Mockup */}
                             <div className="relative aspect-[4/3] w-full rounded-lg bg-white shadow-lg">
                               {/* Mock Header */}
@@ -325,7 +325,7 @@ function Header() {
                             className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-50 text-cyan-600 transition-colors group-hover:bg-cyan-100">
+                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -365,7 +365,7 @@ function Header() {
                             className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-green-50 text-green-600 transition-colors group-hover:bg-green-100">
+                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -385,7 +385,7 @@ function Header() {
                             className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-purple-50 text-purple-600 transition-colors group-hover:bg-purple-100">
+                            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -431,7 +431,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-red-600 transition-colors group-hover:bg-red-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -448,7 +448,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-50 text-pink-600 transition-colors group-hover:bg-pink-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -465,7 +465,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-50 text-purple-600 transition-colors group-hover:bg-purple-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -482,7 +482,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-orange-600 transition-colors group-hover:bg-orange-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -516,7 +516,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-50 text-sky-600 transition-colors group-hover:bg-sky-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -533,7 +533,7 @@ function Header() {
                             className="group flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-gray-50"
                             onClick={handleNavigation}
                           >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 transition-colors group-hover:bg-emerald-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100">
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -552,7 +552,7 @@ function Header() {
                       <div className="rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 p-5">
                         <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Featured</h3>
                         <div className="overflow-hidden rounded-lg bg-white shadow-md">
-                          <div className="aspect-[16/10] bg-gradient-to-br from-cyan-500 to-blue-600 p-4 flex items-center justify-center">
+                          <div className="aspect-[16/10] bg-gradient-to-br from-blue-500 to-blue-600 p-4 flex items-center justify-center">
                             <div className="text-center text-white">
                               <div className="mb-2 flex justify-center">
                                 <div className="rounded-full bg-white/20 p-3 backdrop-blur-sm">
@@ -576,7 +576,7 @@ function Header() {
                             </p>
                             <Link
                               href="/how-it-works"
-                              className="mt-3 inline-flex items-center text-sm font-medium text-cyan-600 hover:text-cyan-700"
+                              className="mt-3 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
                               onClick={handleNavigation}
                             >
                               See how it works
