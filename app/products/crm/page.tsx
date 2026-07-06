@@ -11,83 +11,110 @@ import {
   BarChart3,
   KeyRound,
   ShieldCheck,
-  Users,
-  Tag,
-  ListChecks,
-  Phone,
   Check,
   ArrowRight,
+  CalendarClock,
+  UserCheck,
+  Flame,
+  PhoneForwarded,
 } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "CRM — The Command Center Behind Your AI",
   description:
-    "OpenFlow CRM turns every AI call, text, and appointment into a lead in one place: pipelines, transcripts, two-way SMS, calendar booking, workflow automation, and analytics.",
+    "OpenFlow CRM turns every AI call and text into a lead, then the AI qualifies, checks your real calendar, books appointments, and hands off hot leads — tailored to your industry.",
   alternates: { canonical: "/products/crm" },
 }
+
+// The concrete actions the AI text assistant takes (from the product).
+const actions = [
+  {
+    icon: UserCheck,
+    title: "Qualifies & scores every lead",
+    body: "Reads each conversation, asks the right questions for your trade, and tags the lead hot, warm, or cold — automatically moving them into your pipeline.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Checks your real calendar",
+    body: "Before offering a time, it looks up genuine open slots across the CRM and your connected Google/Outlook calendar — so it only proposes times you can actually keep.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Books the appointment",
+    body: "Once the lead confirms a time, it books it, syncs it to your calendar, drops them into the right pipeline stage, and texts you that it happened.",
+  },
+  {
+    icon: PhoneForwarded,
+    title: "Hands off to a human",
+    body: "If a lead is hot, upset, or asks something it shouldn't answer (a firm price, legal), it flags them, notifies you, and steps back so your team can take over.",
+  },
+]
+
+// Real per-industry conversation goals + pipelines (from the CRM's industry config).
+const industries = [
+  {
+    name: "Roofing",
+    asks: "Roof age, leak or storm damage, whether insurance is involved, and timeline.",
+    books: "A free inspection",
+    pipeline: ["New Lead", "Inspection Scheduled", "Estimate Sent", "Job Won"],
+  },
+  {
+    name: "Automotive",
+    asks: "Which vehicle, service or purchase, and how soon they need it.",
+    books: "A service or sales appointment",
+    pipeline: ["New Lead", "Appointment Booked", "In Service", "Closed Won"],
+  },
+  {
+    name: "Real Estate",
+    asks: "Property condition, timeline, motivation, and rough price expectations.",
+    books: "A walkthrough or consult",
+    pipeline: ["New Lead", "Qualified", "Showing Scheduled", "Under Contract", "Closed"],
+  },
+  {
+    name: "HVAC",
+    asks: "Repair vs. replace, system age, and how urgent it is.",
+    books: "A diagnostic / service visit",
+    pipeline: ["New Lead", "Diagnostic Booked", "Quote Sent", "Won"],
+  },
+  {
+    name: "Handyman",
+    asks: "What needs doing, the timeline, and a rough budget.",
+    books: "An estimate visit",
+    pipeline: ["New Request", "Quoted", "Scheduled", "Completed"],
+  },
+]
 
 const pillars = [
   {
     icon: KanbanSquare,
     title: "Leads & pipeline",
-    body: "A visual kanban board with stages tailored to your industry. Every lead carries its full history — custom fields, tags, lists, and a complete activity timeline.",
-    points: ["Industry-specific pipelines", "Custom fields, tags & lists", "Full activity timeline per lead"],
+    body: "A visual kanban with stages tailored to your industry, plus custom fields, tags, lists, and a full activity timeline on every lead.",
   },
   {
     icon: MessagesSquare,
     title: "Every conversation, one place",
-    body: "Calls, transcripts, recordings, and sentiment sit alongside a two-way text thread from your own number — in one unified inbox, per contact.",
-    points: ["Call transcripts, recordings & sentiment", "Two-way SMS from your own number", "Unified conversations inbox"],
+    body: "Calls, transcripts, recordings, and sentiment sit next to a two-way text thread from your own number — in one unified inbox.",
   },
   {
     icon: PhoneOutgoing,
     title: "Power dialer",
-    body: "Work through call lists fast with a built-in outbound dialer — every call logged, transcribed, and attached to the right lead automatically.",
-    points: ["Outbound call lists", "Auto-logging & transcription", "Live call status"],
-  },
-  {
-    icon: CalendarCheck,
-    title: "Appointments & calendar",
-    body: "Your AI books appointments straight into the CRM and syncs them to Google or Outlook. Availability respects both CRM and calendar busy times.",
-    points: ["Google & Outlook sync", "Real-time availability", "AI books during the call"],
+    body: "Work call lists fast with a built-in outbound dialer; every call is logged, transcribed, and attached to the right lead.",
   },
   {
     icon: Workflow,
     title: "Automation & campaigns",
-    body: "Trigger multi-step workflows on any event, run SMS blast campaigns and drip sequences, and keep the team on track with tasks and reminders.",
-    points: ["Multi-step workflow builder", "SMS blasts & drip sequences", "Tasks, reminders & notifications"],
+    body: "Trigger multi-step workflows on any event, run SMS blast campaigns and drip sequences, and keep the team moving with tasks.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Appointments & calendar",
+    body: "Two-way Google and Outlook sync, real-time availability, and appointments the AI can book during the conversation.",
   },
   {
     icon: BarChart3,
     title: "Analytics & dashboard",
-    body: "A live dashboard of the numbers that matter — calls handled, leads created, appointments booked, and pipeline value — at a glance.",
-    points: ["KPI dashboard", "Pipeline reporting", "Per-agent attribution"],
+    body: "A live view of calls handled, leads created, appointments booked, and pipeline value — with per-agent attribution.",
   },
-]
-
-const everything = [
-  "Multi-tenant workspaces",
-  "Kanban lead pipeline",
-  "Contacts with import & export",
-  "Custom fields & tags",
-  "Contact lists & segments",
-  "Call transcripts & recordings",
-  "Call sentiment analysis",
-  "Unified conversations inbox",
-  "Two-way SMS (your own number)",
-  "SMS blast campaigns",
-  "SMS drip sequences",
-  "Outbound power dialer",
-  "Workflow automation",
-  "Tasks & reminders",
-  "Appointments & booking",
-  "Google & Outlook calendar sync",
-  "Live availability lookup",
-  "Analytics dashboard",
-  "AI agent management",
-  "Public REST API",
-  "Team invites & roles",
-  "In-app notifications",
 ]
 
 export default function CrmPage() {
@@ -118,11 +145,11 @@ export default function CrmPage() {
             OpenFlow CRM
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08]">
-            The command center behind your AI
+            A CRM that doesn&apos;t just store leads — it works them
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-300">
-            Every call, lead, text, and appointment your AI handles flows into one CRM — built for how modern service
-            businesses actually run. No spreadsheets, no manual entry, nothing slipping through.
+            Every call and text your AI handles flows in as a lead — then the AI qualifies it, checks your real
+            calendar, books the appointment, and hands off the hot ones. All in one place, tuned to your industry.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
             <Link
@@ -141,30 +168,126 @@ export default function CrmPage() {
         </div>
       </section>
 
-      {/* Auto-capture band */}
-      <section className="border-b border-gray-100 bg-white px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-            <Phone className="h-6 w-6" />
+      {/* Conversations that take action */}
+      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Conversations that take action</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
+              The AI doesn&apos;t just reply — it does the work
+            </h2>
+            <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
+              When a lead texts in, the AI holds a real conversation, checks your calendar, and books the job — grounded
+              in your actual availability, never making up a time or a price.
+            </p>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 text-balance">
-            Every call becomes a lead — automatically
-          </h2>
-          <p className="mx-auto mt-4 text-base md:text-lg leading-relaxed text-gray-600">
-            The moment your AI agent finishes a call, the caller becomes a lead in the right pipeline — with the
-            transcript, summary, sentiment, and any details captured (job type, address, budget) already attached. Your
-            team opens the CRM to work leads, not to type them in.
-          </p>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* Chat mockup */}
+            <div className="mx-auto w-full max-w-md">
+              <div className="overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-xl">
+                <div className="flex items-center gap-2 border-b border-gray-200 bg-white px-5 py-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+                    AI
+                  </div>
+                  <div className="text-sm font-semibold text-gray-900">Summit Roofing · Text</div>
+                </div>
+                <div className="space-y-3 p-5">
+                  <ChatBubble side="in">Hey, my roof started leaking after the storm last night</ChatBubble>
+                  <ChatBubble side="out">
+                    Sorry to hear that! Is water still coming in right now, and roughly how old is the roof?
+                  </ChatBubble>
+                  <ChatBubble side="in">Maybe 15 years. Yeah it&apos;s dripping into the attic</ChatBubble>
+                  <ChatBubble side="out">
+                    Got it — let&apos;s get someone out fast. I have tomorrow at 9:00 AM or 1:00 PM open for a free
+                    inspection. Which works better?
+                  </ChatBubble>
+                  <ChatBubble side="in">1pm works</ChatBubble>
+                  <ChatBubble side="out">
+                    Perfect — you&apos;re booked for tomorrow at 1:00 PM. You&apos;ll get a confirmation text shortly.
+                  </ChatBubble>
+                </div>
+                <div className="flex flex-wrap gap-2 border-t border-gray-200 bg-white px-5 py-4">
+                  <ActionChip icon={UserCheck}>Qualified: roof age, storm damage</ActionChip>
+                  <ActionChip icon={CalendarClock}>Checked calendar</ActionChip>
+                  <ActionChip icon={CalendarCheck}>Booked inspection</ActionChip>
+                  <ActionChip icon={Flame}>Marked hot → pipeline</ActionChip>
+                </div>
+              </div>
+            </div>
+
+            {/* Actions list */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              {actions.map((action) => {
+                const Icon = action.icon
+                return (
+                  <div key={action.title} className="rounded-2xl border border-gray-200 bg-white p-6">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-base font-semibold text-gray-900">{action.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-600">{action.body}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Pillars */}
+      {/* Trained for your trade */}
       <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Inside the CRM</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Trained for your trade</p>
             <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
-              A full platform, not just a call log
+              It talks like your business — and your pipeline matches
+            </h2>
+            <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
+              Set up a workspace for your industry and the AI already knows what to ask and what to book, with a
+              pipeline seeded for how you actually run.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((ind) => (
+              <div key={ind.name} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+                <h3 className="text-lg font-semibold text-gray-900">{ind.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  <span className="font-medium text-gray-800">Asks about:</span> {ind.asks}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  <span className="font-medium text-gray-800">Books:</span> {ind.books}.
+                </p>
+                <div className="mt-5 flex flex-wrap items-center gap-1.5">
+                  {ind.pipeline.map((stage, i) => (
+                    <span key={stage} className="flex items-center gap-1.5">
+                      <span className="rounded-md bg-blue-50 px-2 py-1 text-[11px] font-medium text-blue-700">
+                        {stage}
+                      </span>
+                      {i < ind.pipeline.length - 1 && <ArrowRight className="h-3 w-3 text-gray-300" />}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <div className="flex flex-col justify-center rounded-2xl border border-dashed border-gray-300 bg-white/60 p-6 md:p-7 text-center">
+              <p className="text-sm font-medium text-gray-700">Not on the list?</p>
+              <p className="mt-2 text-sm leading-relaxed text-gray-500">
+                Any service business can set a custom persona and pipeline — the AI adapts to your questions and stages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform pillars */}
+      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">The full platform</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
+              Everything a modern team runs on
             </h2>
           </div>
 
@@ -181,14 +304,6 @@ export default function CrmPage() {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900">{pillar.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-gray-600">{pillar.body}</p>
-                  <ul className="mt-5 space-y-2">
-                    {pillar.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2 text-sm text-gray-700">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               )
             })}
@@ -196,17 +311,17 @@ export default function CrmPage() {
         </div>
       </section>
 
-      {/* AI-native + security row */}
-      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      {/* AI-native + security */}
+      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto grid max-w-[1100px] gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-slate-50 to-white p-8">
+          <div className="rounded-2xl border border-gray-200 bg-white p-8">
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
               <KeyRound className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900">Built to work with your AI, live</h3>
+            <h3 className="text-xl font-semibold text-gray-900">Your voice AI can act on it, live</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              A secure REST API lets your voice agent act on the CRM mid-conversation — look up a returning caller, check
-              what&apos;s actually open on the calendar, and book the appointment before hanging up.
+              A secure REST API lets your phone agent use the same tools mid-call — look up a returning caller, check
+              real availability, and book before hanging up.
             </p>
             <ul className="mt-5 space-y-2">
               {["Look up & upsert contacts by phone", "Book appointments during the call", "Real-time availability lookup"].map(
@@ -220,14 +335,14 @@ export default function CrmPage() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-slate-50 to-white p-8">
+          <div className="rounded-2xl border border-gray-200 bg-white p-8">
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
               <ShieldCheck className="h-6 w-6" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900">Secure &amp; isolated by design</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Each business is a fully isolated workspace. Credentials are encrypted at rest, API keys are hashed, and
-              inbound webhooks are signature-verified — so one account can never see another&apos;s data.
+              inbound webhooks are signature-verified.
             </p>
             <ul className="mt-5 space-y-2">
               {["Per-business data isolation", "Encrypted credentials (AES-256)", "Signature-verified webhooks"].map((p) => (
@@ -241,44 +356,17 @@ export default function CrmPage() {
         </div>
       </section>
 
-      {/* Everything included */}
-      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="mx-auto max-w-[1100px]">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Everything included</p>
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
-              One platform, every capability
-            </h2>
-            <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
-              No add-ons, no piecing together five tools. It&apos;s all in the CRM your AI already feeds.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {everything.map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800"
-              >
-                <Check className="h-4 w-4 shrink-0 text-blue-600" />
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-gradient-to-b from-[#1a2332] to-[#0f1419] px-4 md:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-balance">
-            See the CRM your AI runs on
+            See it work a real conversation
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base md:text-lg leading-relaxed text-gray-300">
-            Book a demo and we&apos;ll walk you through a live workspace with your industry&apos;s pipeline already set
-            up.
+            Book a demo and we&apos;ll show the AI qualify a lead, check the calendar, and book an appointment — live, in
+            your industry&apos;s workspace.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+          <div className="mt-8 flex justify-center">
             <Link
               href="/partner-intake"
               className="rounded-full bg-blue-600 px-8 py-3.5 text-base font-medium text-white shadow-lg transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-xl inline-flex items-center justify-center gap-2"
@@ -292,5 +380,29 @@ export default function CrmPage() {
 
       <Footer />
     </div>
+  )
+}
+
+function ChatBubble({ side, children }: { side: "in" | "out"; children: React.ReactNode }) {
+  const isOut = side === "out"
+  return (
+    <div className={`flex ${isOut ? "justify-end" : "justify-start"}`}>
+      <div
+        className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-snug ${
+          isOut ? "rounded-br-md bg-blue-600 text-white" : "rounded-bl-md border border-gray-200 bg-white text-gray-800"
+        }`}
+      >
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function ActionChip({ icon: Icon, children }: { icon: React.ElementType; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-medium text-blue-700">
+      <Icon className="h-3 w-3" />
+      {children}
+    </span>
   )
 }
