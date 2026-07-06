@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-type Industry = "appointments" | "sales" | "handyman" | "medical" | "plumber" | "insurance"
+type Industry = "appointments" | "sales" | "support"
 
 export function AICallSimulation() {
   const [currentStep, setCurrentStep] = useState(0)
@@ -11,17 +11,14 @@ export function AICallSimulation() {
   const industries = [
     { id: "appointments" as Industry, label: "Appointment Booking" },
     { id: "sales" as Industry, label: "Sales Call" },
-    { id: "handyman" as Industry, label: "Handyman Services" },
-    { id: "medical" as Industry, label: "Medical Office" },
-    { id: "plumber" as Industry, label: "Plumber" },
-    { id: "insurance" as Industry, label: "Insurance" },
+    { id: "support" as Industry, label: "Customer Support" },
   ]
 
   const conversations: Record<Industry, any[]> = {
     appointments: [
       {
         type: "customer",
-        message: "Hi, I need to reschedule my oil change appointment for tomorrow.",
+        message: "Hi, I need to reschedule my appointment for tomorrow.",
         timestamp: "10:23 AM",
       },
       { type: "processing", message: "AI analyzing request..." },
@@ -44,7 +41,7 @@ export function AICallSimulation() {
       {
         type: "ai",
         message:
-          "Great! I've rescheduled your oil change to Thursday at 2:00 PM. You'll receive a confirmation text shortly. Is there anything else I can help you with?",
+          "Great! I've moved your appointment to Thursday at 2:00 PM. You'll receive a confirmation text shortly. Is there anything else I can help you with?",
         timestamp: "10:25 AM",
         insight: "Appointment confirmed • SMS sent",
       },
@@ -59,32 +56,32 @@ export function AICallSimulation() {
     sales: [
       {
         type: "customer",
-        message: "I saw your ad online. I'm interested in learning more about the 2024 Accord.",
+        message: "I saw your website. I'm interested in learning more about what you offer.",
         timestamp: "2:15 PM",
       },
       { type: "processing", message: "AI analyzing inquiry..." },
       {
         type: "ai",
         message:
-          "Excellent choice! The 2024 Accord is one of our most popular models. Are you looking for a Sport, EX-L, or Touring trim?",
+          "Happy to help! I'd love to understand your needs better. Roughly how large is your team, and what are you hoping to improve?",
         timestamp: "2:15 PM",
-        insight: "Detected: New lead • Vehicle interest",
+        insight: "Detected: New lead • Qualifying",
       },
       {
         type: "customer",
-        message: "I'm not sure about the differences. What would you recommend for a family of four?",
+        message: "We're a team of about 40 and we're trying to cut down on manual follow-up work.",
         timestamp: "2:16 PM",
       },
       { type: "processing", message: "Analyzing customer needs..." },
       {
         type: "ai",
         message:
-          "For a family of four, I'd recommend the EX-L trim. It has great safety features, spacious interior, and leather seats. We currently have three in stock with various colors. Would you like to schedule a test drive?",
+          "That's a great fit. For teams your size, our automation typically saves several hours per person each week. The best next step is a quick demo with one of our specialists. Would you like to book one?",
         timestamp: "2:16 PM",
-        insight: "Matched needs • Inventory checked",
+        insight: "Matched needs • Solution identified",
       },
       { type: "customer", message: "Yes, that sounds perfect. What times are available?", timestamp: "2:17 PM" },
-      { type: "processing", message: "Checking sales team calendar..." },
+      { type: "processing", message: "Checking team calendar..." },
       {
         type: "ai",
         message:
@@ -93,155 +90,41 @@ export function AICallSimulation() {
         insight: "Calendar synced • Lead qualified",
       },
     ],
-    handyman: [
+    support: [
       {
         type: "customer",
-        message: "Hi, my kitchen faucet is leaking and I need someone to fix it today if possible.",
+        message: "Hi, I'm having trouble accessing my account and I'm not sure what's wrong.",
         timestamp: "9:42 AM",
       },
-      { type: "processing", message: "AI analyzing service request..." },
+      { type: "processing", message: "AI analyzing support request..." },
       {
         type: "ai",
         message:
-          "I can definitely help with that! A leaking faucet is something we can typically handle same-day. Can you tell me if it's dripping constantly or only when turned on?",
+          "I'm sorry for the trouble! I can help you get back in. Are you seeing an error message when you try to sign in, or does the page not load at all?",
         timestamp: "9:42 AM",
-        insight: "Service type: Plumbing repair",
+        insight: "Detected: Account access issue",
       },
       {
         type: "customer",
-        message: "It's dripping constantly. It's been getting worse over the last few days.",
+        message: "It says my password is incorrect, but I'm sure I'm typing it right.",
         timestamp: "9:43 AM",
       },
-      { type: "processing", message: "Checking technician availability..." },
+      { type: "processing", message: "Verifying account details..." },
       {
         type: "ai",
         message:
-          "Got it. That's likely a worn cartridge or washer. I can have Mike, our plumbing specialist, out to you today between 1-3 PM. The service call is $89 plus parts. Does that work?",
+          "Thanks for confirming. I've verified your account, and it looks like a recent security update reset your password. I can send you a secure reset link right now. Would you like me to do that?",
         timestamp: "9:43 AM",
-        insight: "Diagnosed issue • Matched technician",
+        insight: "Account verified • Root cause found",
       },
-      { type: "customer", message: "Perfect! Please send him over.", timestamp: "9:44 AM" },
-      { type: "processing", message: "Booking service appointment..." },
+      { type: "customer", message: "Yes please, that would be great.", timestamp: "9:44 AM" },
+      { type: "processing", message: "Sending secure reset link..." },
       {
         type: "ai",
         message:
-          "Excellent! Mike is scheduled for your address at 1 PM today. You'll receive a text 30 minutes before arrival with his photo and vehicle info. Anything else I can help with?",
+          "Done! I've texted a secure reset link to the number on file. It'll expire in 15 minutes for your safety. Once you're back in, is there anything else I can help you with?",
         timestamp: "9:44 AM",
-        insight: "Appointment booked • Technician dispatched",
-      },
-    ],
-    medical: [
-      {
-        type: "customer",
-        message: "Hello, I need to schedule a follow-up appointment with Dr. Martinez.",
-        timestamp: "3:12 PM",
-      },
-      { type: "processing", message: "AI accessing patient records..." },
-      {
-        type: "ai",
-        message:
-          "Hello! I can help you with that. I see you last saw Dr. Martinez on March 3rd. What type of follow-up do you need - a regular check-up or is this regarding a specific concern?",
-        timestamp: "3:12 PM",
-        insight: "Patient verified • History reviewed",
-      },
-      {
-        type: "customer",
-        message: "It's for my blood pressure follow-up. She wanted to see me in 6 weeks.",
-        timestamp: "3:13 PM",
-      },
-      { type: "processing", message: "Checking Dr. Martinez's schedule..." },
-      {
-        type: "ai",
-        message:
-          "Perfect. Dr. Martinez has availability next Tuesday at 10:30 AM or Thursday at 2:00 PM. Both are 30-minute appointments. Which would you prefer?",
-        timestamp: "3:13 PM",
-        insight: "Appointment type identified • Insurance verified",
-      },
-      { type: "customer", message: "Tuesday at 10:30 works great.", timestamp: "3:14 PM" },
-      { type: "processing", message: "Confirming appointment..." },
-      {
-        type: "ai",
-        message:
-          "All set! You're scheduled with Dr. Martinez on Tuesday, April 16th at 10:30 AM. Please arrive 10 minutes early. You'll receive appointment reminders via text and email. See you then!",
-        timestamp: "3:14 PM",
-        insight: "Appointment confirmed • Reminders scheduled",
-      },
-    ],
-    plumber: [
-      {
-        type: "customer",
-        message: "Emergency! My basement is flooding from a burst pipe!",
-        timestamp: "11:23 PM",
-      },
-      { type: "processing", message: "AI detecting emergency situation..." },
-      {
-        type: "ai",
-        message:
-          "I'm sorry to hear that! This is an emergency. First, do you know where your main water shutoff valve is? We need to stop the water flow immediately.",
-        timestamp: "11:23 PM",
-        insight: "PRIORITY: Emergency dispatch",
-      },
-      {
-        type: "customer",
-        message: "Yes, I just shut it off. But there's already a lot of water down here.",
-        timestamp: "11:24 PM",
-      },
-      { type: "processing", message: "Dispatching emergency technician..." },
-      {
-        type: "ai",
-        message:
-          "Good job shutting off the water! I'm dispatching our emergency crew right now. Tom will be at your location within 45 minutes. He's bringing a pump and pipe repair equipment. The emergency service fee is $250 plus repairs. Is that acceptable?",
-        timestamp: "11:24 PM",
-        insight: "Emergency crew en route • ETA 45 min",
-      },
-      { type: "customer", message: "Yes, just please hurry!", timestamp: "11:25 PM" },
-      {
-        type: "ai",
-        message:
-          "Tom is on his way and I've sent his contact info to your phone. He'll call you in 5 minutes. In the meantime, try to move any valuables away from the water. Hang in there!",
-        timestamp: "11:25 PM",
-        insight: "Tech dispatched • Customer notified",
-      },
-    ],
-    insurance: [
-      {
-        type: "customer",
-        message: "Hi, I was in a minor fender bender today and need to file a claim.",
-        timestamp: "4:45 PM",
-      },
-      { type: "processing", message: "AI accessing policy information..." },
-      {
-        type: "ai",
-        message:
-          "I'm sorry to hear about the accident. I'm glad you're calling. First, is everyone okay? Were there any injuries?",
-        timestamp: "4:45 PM",
-        insight: "Policy verified • Claim initiated",
-      },
-      {
-        type: "customer",
-        message: "No, everyone is fine. Just some damage to my rear bumper.",
-        timestamp: "4:46 PM",
-      },
-      { type: "processing", message: "Creating claim file..." },
-      {
-        type: "ai",
-        message:
-          "That's great to hear everyone is safe. I'm opening a claim for you now - your claim number is CLM-2024-7842. Can you tell me what happened and whether the other driver was at fault?",
-        timestamp: "4:46 PM",
-        insight: "Claim #CLM-2024-7842 created",
-      },
-      {
-        type: "customer",
-        message: "They backed into me in a parking lot. I have photos and their insurance info.",
-        timestamp: "4:47 PM",
-      },
-      { type: "processing", message: "Analyzing claim details..." },
-      {
-        type: "ai",
-        message:
-          "Perfect documentation! Since the other party is at fault, we'll pursue their insurance for damages. Your deductible is $500, but we may be able to waive it if their carrier accepts liability. I'm texting you a link to upload photos. An adjuster will contact you within 24 hours.",
-        timestamp: "4:47 PM",
-        insight: "Liability assessed • Upload link sent",
+        insight: "Issue resolved • Reset link sent",
       },
     ],
   }

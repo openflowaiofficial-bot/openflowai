@@ -323,7 +323,7 @@ export default function CrmPage() {
       <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Trained for your trade</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Adapts to your business</p>
             <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
               It talks like your business — and your pipeline matches
             </h2>

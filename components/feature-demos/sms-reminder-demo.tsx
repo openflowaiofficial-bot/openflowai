@@ -6,9 +6,9 @@ export function SMSReminderDemo() {
   const [step, setStep] = useState(0)
 
   const reminders = [
-    { time: "48h before", status: "sent", message: "Hi John! Reminder: Dentist appointment on Thursday 2 PM" },
-    { time: "24h before", status: "sent", message: "Tomorrow at 2 PM - Your dentist appointment. Reply C to confirm" },
-    { time: "2h before", status: "sending", message: "Your appointment starts in 2 hours at Smile Dental" },
+    { time: "48h before", status: "sent", message: "Hi John! Reminder: your appointment is on Thursday at 2 PM" },
+    { time: "24h before", status: "sent", message: "Tomorrow at 2 PM - Your appointment. Reply C to confirm" },
+    { time: "2h before", status: "sending", message: "Your appointment starts in 2 hours. We look forward to seeing you" },
   ]
 
   useEffect(() => {

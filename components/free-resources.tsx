@@ -5,7 +5,7 @@ import { Download } from "lucide-react"
 const ebooks = [
   {
     title: "The Prodigal AI",
-    subtitle: "A Modern Parable for Small Business Owners",
+    subtitle: "A Modern Parable for Business Owners",
     description: "Discover how two business owners made different choices about AI automation — and how it transformed their results.",
     href: "/ebooks/the-prodigal-ai.pdf",
     downloadName: "The-Prodigal-AI-OpenFlow.pdf",

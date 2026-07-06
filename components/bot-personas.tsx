@@ -1,68 +1,67 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Phone, Wrench, UserCircle, AlertCircle } from "lucide-react"
+import { Phone, CalendarClock, UserCircle, AlertCircle } from "lucide-react"
 
 const useCases = [
   {
-    id: "dealership",
-    title: "Car Dealership Sales",
+    id: "sales",
+    title: "Inbound Sales",
     icon: Phone,
-    persona: "Alex - Sales Pro",
+    persona: "Alex — Sales Specialist",
     conversation: [
-      { speaker: "Customer", text: "Hi, I'm interested in the 2024 Toyota Camry." },
-      { speaker: "AI", action: "Detecting intent: Product inquiry" },
-      { speaker: "AI", action: "Checking inventory in real-time..." },
+      { speaker: "Customer", text: "Hi, I'd like to learn more about what you offer." },
+      { speaker: "AI", action: "Detecting intent: Sales inquiry" },
+      { speaker: "AI", action: "Pulling up offerings & pricing..." },
       {
         speaker: "Alex",
-        text: "Great choice! The 2024 Camry is one of our most popular models. I can see we have three in stock right now. Are you looking for a specific color or trim level?",
-        insights: ["Checked inventory", "Engaged with enthusiasm"],
+        text: "Happy to help! We have a few options depending on your needs. Roughly how large is your team, and what are you hoping to solve?",
+        insights: ["Qualifying the lead", "Engaged with intent"],
       },
-      { speaker: "Customer", text: "What's the price range?" },
-      { speaker: "AI", action: "Intent: Pricing information" },
+      { speaker: "Customer", text: "We're around 20 people and keep missing inbound calls." },
+      { speaker: "AI", action: "Intent: Qualifying use case" },
       {
         speaker: "Alex",
-        text: "The 2024 Camry starts at $28,855 for the LE model. We're currently running a special promotion with 0.9% APR financing.",
-        insights: ["Provided transparent pricing", "Mentioned promotion"],
+        text: "That's exactly what we handle. The best next step is a short walkthrough tailored to your setup — I have tomorrow at 10 AM or 2 PM open. Which works?",
+        insights: ["Matched use case", "Proposing a demo"],
       },
-      { speaker: "Customer", text: "That sounds good. Can I test drive it?" },
-      { speaker: "AI", action: "Intent: Schedule test drive" },
-      { speaker: "AI", action: "Accessing calendar availability..." },
+      { speaker: "Customer", text: "Tomorrow at 2 works." },
+      { speaker: "AI", action: "Intent: Schedule demo" },
+      { speaker: "AI", action: "Booking on the calendar..." },
       {
         speaker: "Alex",
-        text: "I have availability tomorrow at 10 AM or 2 PM. I'll also prepare the vehicle details and financing options for you. Which time works better?",
-        insights: ["Booking appointment", "Proactive preparation"],
+        text: "Booked for tomorrow at 2 PM — I'll send a confirmation and a short prep note so we make the most of it. Talk soon!",
+        insights: ["Booked appointment", "Sent confirmation"],
       },
     ],
   },
   {
-    id: "service",
-    title: "Service Business",
-    icon: Wrench,
-    persona: "Maria - Service Coordinator",
+    id: "scheduling",
+    title: "Appointment Booking",
+    icon: CalendarClock,
+    persona: "Maria — Scheduling Specialist",
     conversation: [
-      { speaker: "Customer", text: "I need to schedule a plumbing repair. My sink is leaking." },
-      { speaker: "AI", action: "Detecting urgency level: Medium" },
-      { speaker: "AI", action: "Intent: Emergency service request" },
+      { speaker: "Customer", text: "I need to book an appointment." },
+      { speaker: "AI", action: "Detecting intent: Scheduling request" },
       {
         speaker: "Maria",
-        text: "I'm sorry to hear about your leaking sink. I can definitely help you with that. To ensure we send the right technician, is this a kitchen or bathroom sink?",
-        insights: ["Showed empathy", "Gathering diagnostic info"],
+        text: "Absolutely, I can take care of that. Is this a new consultation or a follow-up on an existing account?",
+        insights: ["Gathering context"],
       },
-      { speaker: "Customer", text: "Kitchen sink. How soon can someone come?" },
-      { speaker: "AI", action: "Checking technician availability..." },
-      { speaker: "AI", action: "Matching: Plumber with kitchen sink expertise" },
+      { speaker: "Customer", text: "A new consultation." },
+      { speaker: "AI", action: "Checking calendar availability..." },
+      { speaker: "AI", action: "Filtering to open 30-minute slots" },
       {
         speaker: "Maria",
-        text: "I have availability today at 2:00 PM or 4:30 PM. Our technician Michael specializes in kitchen fixtures and will bring all necessary parts. The typical repair takes 45-60 minutes.",
-        insights: ["Same-day service", "Set clear expectations", "Matched expert"],
+        text: "Great. I have openings today at 2:00 PM or 4:30 PM, both 30 minutes. Which time works better for you?",
+        insights: ["Real-time availability", "Clear options"],
       },
-      { speaker: "Customer", text: "2 PM works. What's the cost?" },
-      { speaker: "AI", action: "Calculating estimate based on service type..." },
+      { speaker: "Customer", text: "2 PM works." },
+      { speaker: "AI", action: "Booking appointment..." },
       {
         speaker: "Maria",
-        text: "Perfect! I've booked Michael for 2 PM today. The service call is $89, and parts typically range $30-80 depending on what's needed. You'll get a firm quote before any work begins. I'm texting you confirmation now.",
-        insights: ["Booked appointment", "Transparent pricing", "Sent SMS confirmation"],
+        text: "Done — you're set for 2:00 PM today. I'm texting you a confirmation now and a reminder an hour before. Anything else I can help with?",
+        insights: ["Booked appointment", "Sent SMS confirmation"],
       },
     ],
   },
@@ -131,7 +130,7 @@ const useCases = [
 ]
 
 export function BotPersonas() {
-  const [activeTab, setActiveTab] = useState("dealership")
+  const [activeTab, setActiveTab] = useState("sales")
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
 
   const activeCase = useCases.find((uc) => uc.id === activeTab) || useCases[0]
@@ -231,7 +230,7 @@ export function BotPersonas() {
                         {msg.insights.map((insight, insightIdx) => (
                           <span
                             key={insightIdx}
-                            className="text-[10px] px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30"
+                            className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30"
                           >
                             ✓ {insight}
                           </span>

@@ -27,7 +27,7 @@ export function ReminderSystemDemo() {
             15
           </div>
           <div className="flex-1 min-w-0">
-            <h4 className="font-semibold text-gray-800 text-sm sm:text-base">Hair Salon Appointment</h4>
+            <h4 className="font-semibold text-gray-800 text-sm sm:text-base">Upcoming Appointment</h4>
             <p className="text-xs sm:text-sm text-gray-600">Sarah Johnson • June 15, 2024</p>
             <p className="text-xs sm:text-sm text-gray-600">3:00 PM - 4:00 PM</p>
           </div>
