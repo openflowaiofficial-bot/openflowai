@@ -17,7 +17,20 @@ import {
   UserCheck,
   Flame,
   PhoneForwarded,
+  Sparkles,
+  ListChecks,
+  Megaphone,
 } from "lucide-react"
+
+// What the in-CRM assistant "Ora" can do when the business talks to it.
+const oraCapabilities = [
+  { icon: BarChart3, title: "Answer questions about your numbers", body: "“How many calls hit voicemail this week? What does my pipeline look like right now?”" },
+  { icon: KanbanSquare, title: "Update contacts & move deals", body: "“Move John to Estimate Sent and note that I quoted him $8k.”" },
+  { icon: CalendarCheck, title: "Book, reschedule & cancel", body: "“Book Mike for a walkthrough Thursday at 10 — and check what’s open first.”" },
+  { icon: MessagesSquare, title: "Text a customer", body: "It drafts the message in your voice and sends only after you say go." },
+  { icon: Megaphone, title: "Launch call & text campaigns", body: "“Text everyone in New Lead I haven’t called yet” — it confirms the count first." },
+  { icon: ListChecks, title: "Add tasks, notes & tags", body: "Keep every follow-up and detail tracked without leaving the chat." },
+]
 
 export const metadata: Metadata = {
   title: "CRM — The Command Center Behind Your AI",
@@ -168,8 +181,79 @@ export default function CrmPage() {
         </div>
       </section>
 
-      {/* Conversations that take action */}
+      {/* Ora — the assistant you talk to */}
       <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700">
+              <Sparkles className="h-3.5 w-3.5" />
+              Meet Ora
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
+              Just talk to your CRM. Ora does the rest.
+            </h2>
+            <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
+              Every workspace comes with Ora — a built-in assistant you chat with in plain English. Ask about your
+              numbers or tell it what to do, and it acts across your CRM for you.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            {/* Ora chat mockup */}
+            <div className="mx-auto w-full max-w-md">
+              <div className="overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-xl">
+                <div className="flex items-center gap-2 border-b border-gray-200 bg-white px-5 py-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                    <Sparkles className="h-4 w-4" />
+                  </div>
+                  <div className="text-sm font-semibold text-gray-900">Ora · Your assistant</div>
+                </div>
+                <div className="space-y-3 p-5">
+                  <ChatBubble side="out">How many calls went to voicemail this week?</ChatBubble>
+                  <ChatBubble side="in">
+                    Last 7 days: 214 calls, 61 to voicemail (29%). 118 connected, and the AI booked 9 appointments.
+                  </ChatBubble>
+                  <ChatBubble side="out">
+                    Text everyone in Estimate Sent I haven&apos;t called yet — &quot;Hey, any questions on your quote?&quot;
+                  </ChatBubble>
+                  <ChatBubble side="in">
+                    That matches 23 contacts. I&apos;ll send: &quot;Hey, any questions on your quote?&quot; — want me to send it?
+                  </ChatBubble>
+                  <ChatBubble side="out">yes</ChatBubble>
+                  <ChatBubble side="in">Done — sent to all 23, and logged it on each timeline.</ChatBubble>
+                </div>
+                <div className="flex flex-wrap gap-2 border-t border-gray-200 bg-white px-5 py-4">
+                  <ActionChip icon={BarChart3}>Read call analytics</ActionChip>
+                  <ActionChip icon={UserCheck}>Matched 23 contacts</ActionChip>
+                  <ActionChip icon={Megaphone}>Sent text campaign</ActionChip>
+                </div>
+              </div>
+              <p className="mt-4 text-center text-xs text-gray-500">
+                Powered by Claude. Ora confirms before anything bulk or outbound, and never texts a Do-Not-Contact.
+              </p>
+            </div>
+
+            {/* Ora capabilities */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              {oraCapabilities.map((cap) => {
+                const Icon = cap.icon
+                return (
+                  <div key={cap.title} className="rounded-2xl border border-gray-200 bg-white p-6">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-base font-semibold text-gray-900">{cap.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-600">{cap.body}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conversations that take action */}
+      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Conversations that take action</p>
@@ -236,7 +320,7 @@ export default function CrmPage() {
       </section>
 
       {/* Trained for your trade */}
-      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Trained for your trade</p>
@@ -282,7 +366,7 @@ export default function CrmPage() {
       </section>
 
       {/* Platform pillars */}
-      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">The full platform</p>
@@ -312,7 +396,7 @@ export default function CrmPage() {
       </section>
 
       {/* AI-native + security */}
-      <section className="bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <section className="bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="mx-auto grid max-w-[1100px] gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-gray-200 bg-white p-8">
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
