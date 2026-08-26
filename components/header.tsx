@@ -297,6 +297,13 @@ function Header() {
               Pricing
             </Link>
             <Link
+              href="/referral"
+              className="text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
+              onClick={handleNavigation}
+            >
+              Referral
+            </Link>
+            <Link
               href="/partner-intake"
               className="text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
               onClick={handleNavigation}
@@ -436,6 +443,15 @@ function Header() {
               onClick={handleNavigation}
             >
               Pricing
+            </Link>
+
+            {/* Referral Link - Mobile */}
+            <Link
+              href="/referral"
+              className="block py-2 text-base font-medium text-gray-900 hover:text-gray-600"
+              onClick={handleNavigation}
+            >
+              Referral
             </Link>
 
             {/* Clients Link - Mobile */}

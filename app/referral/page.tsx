@@ -1,17 +1,8 @@
-"use client"
-
-import { useState } from "react"
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
-import {
-  Phone,
-  CalendarCheck,
-  Repeat,
-  Handshake,
-  Check,
-  ArrowRight,
-  ShieldCheck,
-} from "lucide-react"
+import { Phone, CalendarCheck, Repeat, Handshake, Check, ArrowRight } from "lucide-react"
+
+const CAL_URL = "https://cal.com/openflowai-meeting/30min"
 
 const goodFits = [
   "Dental & medical practices",
@@ -47,52 +38,13 @@ const proofStats = [
   { stat: "24/7", label: "every call answered — nights, weekends, the lunch rush" },
 ]
 
-const namedClients = [
-  "O'Daniel Mazda",
-  "VetComm",
-  "The Red Theory Studio",
-  "The Salon Center",
-  "Vibrant Health Care",
+const nextSteps = [
+  "We hop on a quick call",
+  "You make the intro, however's easy",
+  "They become a client — you get paid, every month",
 ]
 
-type Status = "idle" | "submitting" | "success" | "error"
-
 export default function ReferralPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", referring: "", company: "" })
-  const [status, setStatus] = useState<Status>("idle")
-  const [errorMsg, setErrorMsg] = useState("")
-
-  const update = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus("submitting")
-    setErrorMsg("")
-    try {
-      const res = await fetch("/api/referral", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      })
-      const data = await res.json().catch(() => ({}))
-      if (res.ok && data.ok) {
-        setStatus("success")
-      } else {
-        setStatus("error")
-        setErrorMsg(
-          "We couldn't save that just now. Email us at openflowaiofficial@gmail.com and we'll take it from there."
-        )
-      }
-    } catch {
-      setStatus("error")
-      setErrorMsg(
-        "We couldn't save that just now. Email us at openflowaiofficial@gmail.com and we'll take it from there."
-      )
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -133,10 +85,12 @@ export default function ReferralPage() {
 
           <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
             <a
-              href="#refer"
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-blue-600 px-7 py-3.5 text-base font-medium shadow-lg shadow-blue-600/30 transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5"
             >
-              Refer a business
+              Book a time
             </a>
             <a
               href="#how"
@@ -278,15 +232,6 @@ export default function ReferralPage() {
               </div>
             ))}
           </div>
-
-          <div className="mt-10 text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Answering phones for</p>
-            <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-300">
-              {namedClients.map((c) => (
-                <span key={c}>{c}</span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -335,129 +280,40 @@ export default function ReferralPage() {
         </div>
       </section>
 
-      {/* ===== Form ===== */}
-      <section id="refer" className="scroll-mt-20 bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="mx-auto max-w-[560px]">
-          {status === "success" ? (
-            <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600">
-                <Check className="h-7 w-7" />
+      {/* ===== Booking CTA ===== */}
+      <section id="book" className="scroll-mt-20 bg-[#f8f9fb] px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Know someone?</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-balance">
+            Book a quick call and make the intro
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-gray-600">
+            Grab a time on our calendar. Tell us who you're thinking of, and we take it from there — the demo, the
+            build, the support, and the billing. The month they start paying, you start getting paid.
+          </p>
+
+          <div className="mt-8">
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5"
+            >
+              Book a time on our calendar
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
+            {nextSteps.map((step, i) => (
+              <div key={step} className="rounded-xl border border-gray-200 bg-white p-5 text-center">
+                <div className="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-600">
+                  {i + 1}
+                </div>
+                <p className="text-sm leading-relaxed text-gray-700">{step}</p>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">Got it. Thank you.</h2>
-              <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                We'll reach out within a day to line up the introduction. You make it however's easiest — an email, a
-                text, a quick call. Then we take it from there, and the month they start paying, you start getting paid.
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Know someone?</p>
-                <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 text-balance">
-                  Start the introduction
-                </h2>
-                <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
-                  Drop your info below. No cost, no commitment. We'll reach out and handle the rest.
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="mt-8 space-y-4 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
-                {/* Honeypot — hidden from real users */}
-                <input
-                  type="text"
-                  name="company"
-                  value={form.company}
-                  onChange={update}
-                  tabIndex={-1}
-                  autoComplete="off"
-                  aria-hidden="true"
-                  className="hidden"
-                />
-
-                <div>
-                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-gray-700">
-                    Your name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={update}
-                    className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[15px] text-gray-900 outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-                    placeholder="Jordan Smith"
-                  />
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-gray-700">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={update}
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[15px] text-gray-900 outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-                      placeholder="you@email.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-gray-700">
-                      Phone
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      required
-                      value={form.phone}
-                      onChange={update}
-                      className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[15px] text-gray-900 outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="referring" className="mb-1.5 block text-sm font-medium text-gray-700">
-                    Who are you thinking of introducing? <span className="text-gray-400">(optional)</span>
-                  </label>
-                  <textarea
-                    id="referring"
-                    name="referring"
-                    rows={3}
-                    value={form.referring}
-                    onChange={update}
-                    className="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 text-[15px] text-gray-900 outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-                    placeholder="The business or person — even a rough idea. My dentist, the shop that did my brakes, etc."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === "submitting"}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
-                >
-                  {status === "submitting" ? "Sending..." : "Send it over"}
-                  {status !== "submitting" && <ArrowRight className="h-4 w-4" />}
-                </button>
-
-                {status === "error" && (
-                  <p className="text-center text-sm text-red-600">{errorMsg}</p>
-                )}
-
-                <p className="flex items-center justify-center gap-1.5 text-center text-xs text-gray-500">
-                  <ShieldCheck className="h-3.5 w-3.5" />
-                  We only use this to reach out about the introduction. Nothing else.
-                </p>
-              </form>
-            </>
-          )}
+            ))}
+          </div>
         </div>
       </section>
 
