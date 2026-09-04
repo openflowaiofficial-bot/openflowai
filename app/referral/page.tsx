@@ -1,6 +1,8 @@
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Phone, CalendarCheck, Repeat, Handshake, Check, ArrowRight } from "lucide-react"
+import { ReferralSignupForm } from "@/components/referral-signup-form"
+import { TrackedLink } from "@/components/track"
 
 const CAL_URL = "https://cal.com/openflowai-meeting/30min"
 
@@ -83,20 +85,12 @@ export default function ReferralPage() {
             for as long as they stay.</strong>
           </p>
 
-          <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-blue-600 px-7 py-3.5 text-base font-medium shadow-lg shadow-blue-600/30 transition-all duration-200 hover:bg-blue-700 hover:-translate-y-0.5"
-            >
-              Book a time
-            </a>
-            <a
-              href="#how"
-              className="rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-base font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:-translate-y-0.5"
-            >
-              How it works
+          <div id="signup" className="mx-auto mt-10 max-w-xl scroll-mt-24">
+            <ReferralSignupForm />
+          </div>
+          <div className="mt-6">
+            <a href="#how" className="text-sm font-medium text-slate-300 underline-offset-4 hover:underline">
+              How it works ↓
             </a>
           </div>
 
@@ -293,7 +287,9 @@ export default function ReferralPage() {
           </p>
 
           <div className="mt-8">
-            <a
+            <TrackedLink
+              event="book_call_clicked"
+              params={{ placement: "referral_page" }}
               href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -301,7 +297,7 @@ export default function ReferralPage() {
             >
               Book a time on our calendar
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </TrackedLink>
           </div>
 
           <div className="mx-auto mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">

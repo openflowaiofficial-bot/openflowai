@@ -2,46 +2,49 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-
-const STORAGE_KEY = "openflow-cookie-consent"
-const APOLLO_APP_ID = "68b904169a09db00191c0e14"
-
-function loadApollo() {
-  if (typeof window === "undefined") return
-  if ((window as unknown as { __apolloLoaded?: boolean }).__apolloLoaded) return
-  ;(window as unknown as { __apolloLoaded?: boolean }).__apolloLoaded = true
-  const n = Math.random().toString(36).substring(7)
-  const o = document.createElement("script")
-  o.src = `https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=${n}`
-  o.async = true
-  o.defer = true
-  o.onload = () => {
-    const w = window as unknown as { trackingFunctions?: { onLoad: (a: { appId: string }) => void } }
-    w.trackingFunctions?.onLoad({ appId: APOLLO_APP_ID })
-  }
-  document.head.appendChild(o)
-}
+import { usePathname } from "next/navigation"
+import { CONSENT_STORAGE_KEY, hasConsent, loadTrackers, trackPageView } from "@/lib/tracking"
 
 export function CookieConsent() {
   const [visible, setVisible] = useState(false)
+  const pathname = usePathname()
 
+  // On first load: honor a saved choice, or show the banner.
   useEffect(() => {
-    const choice = localStorage.getItem(STORAGE_KEY)
+    let choice: string | null = null
+    try {
+      choice = localStorage.getItem(CONSENT_STORAGE_KEY)
+    } catch {
+      /* storage blocked — treat as no choice */
+    }
     if (choice === "accepted") {
-      loadApollo()
+      loadTrackers()
     } else if (choice !== "declined") {
       setVisible(true)
     }
   }, [])
 
+  // Report client-side navigations as page views once trackers are running.
+  useEffect(() => {
+    if (hasConsent()) trackPageView(pathname)
+  }, [pathname])
+
   const accept = () => {
-    localStorage.setItem(STORAGE_KEY, "accepted")
+    try {
+      localStorage.setItem(CONSENT_STORAGE_KEY, "accepted")
+    } catch {
+      /* ignore */
+    }
     setVisible(false)
-    loadApollo()
+    loadTrackers()
   }
 
   const decline = () => {
-    localStorage.setItem(STORAGE_KEY, "declined")
+    try {
+      localStorage.setItem(CONSENT_STORAGE_KEY, "declined")
+    } catch {
+      /* ignore */
+    }
     setVisible(false)
   }
 
@@ -51,7 +54,7 @@ export function CookieConsent() {
     <div className="fixed inset-x-0 bottom-0 z-[100] px-4 pb-4">
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-xl sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-gray-600">
-          We use cookies for analytics to understand how the site is used. See our{" "}
+          We use cookies for analytics and advertising to understand how the site is used. See our{" "}
           <Link href="/cookies" className="font-medium text-blue-600 hover:text-blue-700">
             Cookie Policy
           </Link>

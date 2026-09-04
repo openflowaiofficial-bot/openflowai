@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { CheckCircle2, Loader2, ArrowLeft } from "lucide-react"
+import { track } from "@/lib/tracking"
 
 const WEBHOOK_URL = "https://keebler-automations.app.n8n.cloud/webhook/2183c551-7a08-4ca9-a9f5-00cc38292818"
 const CAL_BOOKING_URL = "https://cal.com/openflowai-meeting/30min"
@@ -87,6 +88,7 @@ export default function PartnerIntakePage() {
         mode: "no-cors",
       })
 
+      track("demo_booked", { businessType: payload.businessType })
       // Redirect to cal.com booking page
       window.location.href = CAL_BOOKING_URL
     } catch (error) {

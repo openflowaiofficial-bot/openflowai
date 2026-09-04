@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Check } from "lucide-react"
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
+import { TrackPageEvent } from "@/components/track"
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -57,6 +58,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fb]">
       <Header />
+      <TrackPageEvent event="pricing_viewed" />
 
       <section className="px-4 sm:px-6 pt-28 md:pt-36 pb-10 md:pb-14">
         <div className="mx-auto max-w-3xl text-center">
