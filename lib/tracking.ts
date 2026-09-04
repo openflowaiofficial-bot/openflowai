@@ -7,12 +7,12 @@
  *
  * Configure in Vercel → Project → Settings → Environment Variables:
  *   NEXT_PUBLIC_GA_MEASUREMENT_ID   e.g. G-XXXXXXXXXX   (Google Analytics 4)
- *   NEXT_PUBLIC_META_PIXEL_ID       e.g. 123456789012345 (Meta / Facebook)
+ *   NEXT_PUBLIC_META_PIXEL_ID       Meta / Facebook pixel (defaults to the openflowai.io pixel)
  *   NEXT_PUBLIC_APOLLO_APP_ID       Apollo website-visitor tracker
  */
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ""
-export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ""
+export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1769334424374974"
 export const APOLLO_APP_ID = process.env.NEXT_PUBLIC_APOLLO_APP_ID ?? "68b904169a09db00191c0e14"
 
 export const CONSENT_STORAGE_KEY = "openflow-cookie-consent"
