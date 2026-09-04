@@ -20,6 +20,7 @@ const routes = [
   "/products/call-recording",
   "/products/lead-qualification",
   "/referral",
+  "/use-cases",
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,5 +1,6 @@
 "use client"
 
+import { track } from "@/lib/tracking"
 import { useEffect, useState, useRef } from "react"
 import { Phone, X, Mic, MicOff } from "lucide-react"
 import { RetellWebClient } from "retell-client-js-sdk"
@@ -18,6 +19,7 @@ export function RetellWidget() {
     client.on("call_started", () => {
       setIsCallActive(true)
       setCallStatus("Connected")
+      track("web_call_started")
     })
 
     client.on("call_ended", () => {

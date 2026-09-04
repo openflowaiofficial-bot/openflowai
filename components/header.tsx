@@ -290,6 +290,13 @@ function Header() {
               Automations
             </Link>
             <Link
+              href="/use-cases"
+              className="text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
+              onClick={handleNavigation}
+            >
+              Use Cases
+            </Link>
+            <Link
               href="/pricing"
               className="text-sm md:text-[15px] text-gray-600 transition-colors hover:text-gray-900 px-3 py-2 rounded-md hover:bg-gray-100"
               onClick={handleNavigation}
@@ -437,6 +444,13 @@ function Header() {
             </Link>
 
             {/* Pricing Link - Mobile */}
+            <Link
+              href="/use-cases"
+              className="block py-2 text-base font-medium text-gray-900 hover:text-gray-600"
+              onClick={handleNavigation}
+            >
+              Use Cases
+            </Link>
             <Link
               href="/pricing"
               className="block py-2 text-base font-medium text-gray-900 hover:text-gray-600"
