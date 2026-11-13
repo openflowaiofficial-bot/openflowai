@@ -9,8 +9,9 @@ const CAL_URL = "https://cal.com/openflowai-meeting/30min"
 
 export function UseCaseCard({ useCase, index }: { useCase: UseCase; index: number }) {
   const [playing, setPlaying] = useState(false)
-  const embed = loomEmbedUrl(useCase.loomUrl)
-  const ready = embed !== ""
+  const video = useCase.video
+  const embed = video ? "" : loomEmbedUrl(useCase.loomUrl)
+  const ready = Boolean(video) || embed !== ""
 
   const play = () => {
     if (!ready) return
@@ -34,6 +35,11 @@ export function UseCaseCard({ useCase, index }: { useCase: UseCase; index: numbe
         <p className="mt-4 text-sm text-gray-500">
           Shown on: <span className="text-gray-700">{useCase.business}</span>
         </p>
+        {video ? (
+          <p className="mt-1 text-sm text-gray-500">
+            {video.source === "real" ? "Real calls · voices re-recorded, names removed" : "Demo · fictional business and people"}
+          </p>
+        ) : null}
         <div className="mt-auto pt-6">
           <a
             href={CAL_URL}
@@ -48,7 +54,17 @@ export function UseCaseCard({ useCase, index }: { useCase: UseCase; index: numbe
       </div>
 
       <div className="relative aspect-video overflow-hidden rounded-2xl bg-[#070b18] shadow-xl ring-1 ring-gray-900/10">
-        {playing && ready ? (
+        {playing && video ? (
+          <video
+            src={video.src}
+            poster={video.poster}
+            autoPlay
+            controls
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full bg-black object-contain"
+          />
+        ) : playing && embed ? (
           <iframe
             src={`${embed}&autoplay=1`}
             title={useCase.title}
@@ -64,15 +80,25 @@ export function UseCaseCard({ useCase, index }: { useCase: UseCase; index: numbe
             aria-label={ready ? `Play: ${useCase.title}` : `${useCase.title} — video coming soon`}
             className="group absolute inset-0 flex h-full w-full flex-col items-center justify-center text-white disabled:cursor-default"
           >
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute left-1/2 top-1/2 h-[260px] w-[420px] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/25 blur-[90px]" />
-            </div>
+            {video ? (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={video.poster} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-[#070b18]/35 transition-colors group-hover:bg-[#070b18]/25" />
+              </>
+            ) : (
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute left-1/2 top-1/2 h-[260px] w-[420px] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/25 blur-[90px]" />
+              </div>
+            )}
             {ready ? (
               <>
-                <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-transform group-hover:scale-105">
+                <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#070b18]/70 ring-1 ring-white/30 backdrop-blur-sm transition-transform group-hover:scale-105">
                   <Play className="ml-1 h-7 w-7 fill-current" />
                 </span>
-                <span className="relative mt-4 text-sm font-medium text-slate-200">Watch · about 2 min</span>
+                <span className="relative mt-4 rounded-full bg-[#070b18]/70 px-3 py-1 text-sm font-medium text-slate-100">
+                  Watch · {video ? video.length : "about 2 min"}
+                </span>
               </>
             ) : (
               <>

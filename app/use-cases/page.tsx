@@ -7,7 +7,7 @@ import { USE_CASES } from "@/lib/use-cases"
 const CAL_URL = "https://cal.com/openflowai-meeting/30min"
 
 export default function UseCasesPage() {
-  const published = USE_CASES.filter((u) => u.loomUrl).length
+  const published = USE_CASES.filter((u) => u.loomUrl || u.video).length
 
   return (
     <div className="min-h-screen bg-white">
@@ -39,8 +39,9 @@ export default function UseCasesPage() {
             Watch the agents <span className="text-blue-400">do the job.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-300">
-            Real calls, real texts, real bookings landing in the CRM. One short video for each kind of agent we run
-            — from the front desk to a sales floor to a contact center.
+            Calls, texts and bookings landing in the CRM — real calls where we can show them, clearly labelled demos
+            where we can&apos;t. One short video for each kind of agent we run, from the front desk to a sales floor to a
+            contact center.
           </p>
 
           <nav aria-label="Jump to a use case" className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2">
